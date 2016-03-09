@@ -1,12 +1,12 @@
 <?php
 // Connecting, selecting database
-$dbconn = pg_connect("host=ec2-54-83-56-31.compute-1.amazonaws.com dbname=d9m4a5line7roh user=aghezwnhlovcgi password=G1Rqb8FklwiOiwI4an8AoNOj86")
+$db = pg_connect("host=ec2-54-83-56-31.compute-1.amazonaws.com dbname=d9m4a5line7roh user=aghezwnhlovcgi password=G1Rqb8FklwiOiwI4an8AoNOj86")
     or die('Could not connect: ' . pg_last_error());
 
 // Performing SQL query
-$query = '
 
 
+$sql =<<<EOF
 CREATE TABLE "User"(
 	"id" Integer NOT NULL PRIMARY KEY AUTOINCREMENT,
 	"name" Text NOT NULL,
@@ -42,20 +42,18 @@ CREATE INDEX "index_User_id" ON "tbl_Exercise_MM_User"( "User_id" );
 
 
 
-CREATE INDEX "index_Exercise_id" ON "tbl_Exercise_MM_User"( "Exercise_id" );'
+CREATE INDEX "index_Exercise_id" ON "tbl_Exercise_MM_User"( "Exercise_id" );
+
+EOF;
+
+$ret = pg_query($db, $sql);
+   if(!$ret){
+      echo pg_last_error($db);
+   } else {
+      echo "Table created successfully\n";
+   }
 
 
-
-$result = pg_query($query) or die('Query failed: ' . pg_last_error());
-
-echo "<table>\n";
-while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-    echo "\t<tr>\n";
-    foreach ($line as $col_value) {
-        echo "\t\t<td>$col_value</td>\n";
-    }
-    echo "\t</tr>\n";
-}
-echo "</table>\n";
+pg_close($dbconn);
 
 ?>
