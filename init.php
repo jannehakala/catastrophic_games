@@ -4,7 +4,7 @@ $dbconn = pg_connect("host=ec2-54-83-56-31.compute-1.amazonaws.com dbname=d9m4a5
     or die('Could not connect: ' . pg_last_error());
 
 // Performing SQL query
-$query = 'BEGIN;
+$query = '
 
 
 CREATE TABLE "User"(
@@ -42,9 +42,20 @@ CREATE INDEX "index_User_id" ON "tbl_Exercise_MM_User"( "User_id" );
 
 
 
-CREATE INDEX "index_Exercise_id" ON "tbl_Exercise_MM_User"( "Exercise_id" );
+CREATE INDEX "index_Exercise_id" ON "tbl_Exercise_MM_User"( "Exercise_id" );'
 
 
-COMMIT';
+
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
+
+echo "<table>\n";
+while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+    echo "\t<tr>\n";
+    foreach ($line as $col_value) {
+        echo "\t\t<td>$col_value</td>\n";
+    }
+    echo "\t</tr>\n";
+}
+echo "</table>\n";
+
 ?>
