@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-<head>
+	<head>
 	<title>Scarabeus</title>
 	<link rel="stylesheet" type="text/css" href="mainstyles.css">
 </head>
@@ -35,6 +35,7 @@
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor a nisi sit amet aliquet. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque ullamcorper tellus turpis, non maximus orci hendrerit eu. Suspendisse eu erat a dui mattis euismod. Donec eleifend gravida dolor ut ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in venenatis ex. Pellentesque aliquet odio nec eros auctor facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 
 					</p>
+					<a href="init.php">test</a>
 				</div>
 			</div>
 		</div>		
