@@ -6,9 +6,10 @@ $db = pg_connect("host=ec2-54-83-56-31.compute-1.amazonaws.com dbname=d9m4a5line
 // Performing SQL query
 
    $sql =<<<EOF
-      DROP TABLE USERS;
-	  DROP TABLE COMPANY;
-
+      CREATE TABLE USERS
+      (ID INT PRIMARY KEY     NOT NULL,
+      NAME           TEXT    NOT NULL,
+      PASSWORD        CHAR(20) NOT NULL);
 EOF;
 
 $ret = pg_query($db, $sql);
