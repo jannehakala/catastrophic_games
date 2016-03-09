@@ -5,13 +5,9 @@ $db = pg_connect("host=ec2-54-83-56-31.compute-1.amazonaws.com dbname=d9m4a5line
 
 // Performing SQL query
 
-
-
    $sql =<<<EOF
-      CREATE TABLE EXECATEGORY
-      (ID INT PRIMARY KEY     NOT NULL,
-      CODE           TEXT    NOT NULL,
-      NAME       	 TEXT	NOT NULL);
+      DROP TABLE USERS;
+	  DROP TABLE COMPANY;
 
 EOF;
 
