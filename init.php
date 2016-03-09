@@ -8,18 +8,18 @@ $db = pg_connect("host=ec2-54-83-56-31.compute-1.amazonaws.com dbname=d9m4a5line
 
 $sql =<<<EOF
 CREATE TABLE "User"(
-	"id" Integer NOT NULL SERIAL PRIMARY KEY,
+	"id" Integer SERIAL PRIMARY KEY,
 	"name" Text NOT NULL,
 	"password" Text NOT NULL );
 
 CREATE TABLE "Exercisecategory"(
-	"id" Integer NOT NULL SERIAL PRIMARY KEY,
+	"id" Integer SERIAL PRIMARY KEY,
 	"code" Text NOT NULL,
 	"name" Text NOT NULL );
 
 
 CREATE TABLE "Exercise"(
-	"id" Integer NOT NULL SERIAL PRIMARY KEY,
+	"id" Integer SERIAL PRIMARY KEY,
 	"info" Text,
 	"Exercisecategory_id" Integer,
 	CONSTRAINT "lnk_Exercisecategory_Exercise" FOREIGN KEY ( "Exercisecategory_id" ) REFERENCES "Exercisecategory"( "id" )
@@ -50,7 +50,7 @@ $ret = pg_query($db, $sql);
    if(!$ret){
       echo pg_last_error($db);
    } else {
-      echo "Table created successfully\n";
+      echo "taulu luotiin jes\n";
    }
 
 
