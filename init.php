@@ -7,10 +7,10 @@ $db = pg_connect("host=ec2-54-83-56-31.compute-1.amazonaws.com dbname=d9m4a5line
 
 
 $sql =<<<EOF
-CREATE TABLE User(
-	id Integer SERIAL PRIMARY KEY,
-	name Text NOT NULL,
-	password Text NOT NULL );
+CREATE TABLE USER(
+	id INT PRIMARY KEY NOT NULL,
+	name TEXT NOT NULL,
+	password CHAR(20) NOT NULL );
 
 EOF;
 
