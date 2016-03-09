@@ -7,42 +7,12 @@ $db = pg_connect("host=ec2-54-83-56-31.compute-1.amazonaws.com dbname=d9m4a5line
 
 
 $sql =<<<EOF
-CREATE TABLE "User"(
-	"id" Integer NOT NULL PRIMARY KEY AUTOINCREMENT,
-	"name" Text NOT NULL,
-	"password" Text NOT NULL );
-
-CREATE TABLE "Exercisecategory"(
-	"id" Integer NOT NULL PRIMARY KEY AUTOINCREMENT,
-	"code" Text NOT NULL,
-	"name" Text NOT NULL );
-
-
-CREATE TABLE "Exercise"(
-	"id" Integer NOT NULL PRIMARY KEY AUTOINCREMENT,
-	"info" Text,
-	"Exercisecategory_id" Integer,
-	CONSTRAINT "lnk_Exercisecategory_Exercise" FOREIGN KEY ( "Exercisecategory_id" ) REFERENCES "Exercisecategory"( "id" )
- );
-
-CREATE INDEX "index_Exercisecategory_id" ON "Exercise"( "Exercisecategory_id" );
-
-
-
-CREATE TABLE "tbl_Exercise_MM_User"(
-	"Exercise_id" Integer,
-	"User_id" Integer,
-	"points" Integer NOT NULL,
-	CONSTRAINT "lnk_User_MM_Exercise" FOREIGN KEY ( "User_id" ) REFERENCES "User"( "id" )
-,
-	CONSTRAINT "lnk_Exercise_MM_User" FOREIGN KEY ( "Exercise_id" ) REFERENCES "Exercise"( "id" )
- );
-
-CREATE INDEX "index_User_id" ON "tbl_Exercise_MM_User"( "User_id" );
-
-
-
-CREATE INDEX "index_Exercise_id" ON "tbl_Exercise_MM_User"( "Exercise_id" );
+CREATE TABLE COMPANY
+      (ID INT PRIMARY KEY     NOT NULL,
+      NAME           TEXT    NOT NULL,
+      AGE            INT     NOT NULL,
+      ADDRESS        CHAR(50),
+      SALARY         REAL);
 
 EOF;
 
