@@ -5,7 +5,7 @@ $db = pg_connect("host=ec2-54-83-56-31.compute-1.amazonaws.com dbname=d9m4a5line
 
 // Performing SQL query
 
-
+//fdsf
 $sql =<<<EOF
 CREATE TABLE COMPANY
       (ID INT PRIMARY KEY     NOT NULL,
