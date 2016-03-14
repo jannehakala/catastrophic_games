@@ -1,6 +1,6 @@
 <?php
 // Connecting, selecting database
-AWS::S3::Base.establish_connection!(
+AWS::SCARABEUS::Base.establish_connection!(
   :host   => ENV['HOST_KEY'],
   :dbname => ENV['DB_KEY'],
   :user   => EVL['USER_KEY'],
