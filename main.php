@@ -19,6 +19,7 @@
 				<div id="left-1">
 					<h2>Exercises</h2>
 					<ul>
+						<li><a href="llquiz.html">Exercise 1</a></li>
 						<li>Exercise 1</li>
 						<li>Exercise 2</li>
 						<li>Exercise 3</li>
@@ -28,13 +29,14 @@
 					<h2>Statistics</h2>
 				</div>
 			</div>
-
+			
 			<div id="right">
 				<div id="content">
 					<h2>Quiz</h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor a nisi sit amet aliquet. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque ullamcorper tellus turpis, non maximus orci hendrerit eu. Suspendisse eu erat a dui mattis euismod. Donec eleifend gravida dolor ut ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in venenatis ex. Pellentesque aliquet odio nec eros auctor facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 
 					</p>
+					<a href="dbinit.php>klikkaa</a>
 				</div>
 			</div>
 		</div>		
