@@ -67,12 +67,13 @@ if (isset($_POST['register'])) {
 	}
 
 	if (empty($nameErr) && empty($emailErr) && empty($passErr)) {
-		$message = "Great success";
+		//$message = "Great success";
 
 		// TIETOKANTAYHTEYS JA TIEDON SYÖTTÖ KANTAAN
-		$query = pg_insert($db, "User", array("name"=>$username, "password"=>$password));
+		$query = pg_query($db, "INSERT INTO User(name, password) VALUES($username, $password);");
 		if ($query) {
-			echo "Great success";
+			echo "Great success<br>";
+			var_dump($result);
 		}
 		else {
 			echo "Nope";
