@@ -70,16 +70,19 @@ if (isset($_POST['register'])) {
 		//$message = "Great success";
 
 		// TIETOKANTAYHTEYS JA TIEDON SYÖTTÖ KANTAAN
-		$query = pg_query($db, "INSERT INTO User(name, password) VALUES($username, $password);");
-		if ($query) {
-			echo "Great success<br>";
-			var_dump($result);
+		$query = "INSERT INTO User(name, password) VALUES('" . $username . "', '" . $password . "')";
+		$result = pg_query($query);
+
+		if (!$result) {
+			$errormessage = pg_last_error();
+			echo "Error: " . $errormessage;
+			exit();
 		}
 		else {
-			echo "Nope";
+			echo "Success";
 		}
 
-		pg_close($db);
+		pg_close();
 	}
 }
 ?>
