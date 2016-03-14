@@ -1,6 +1,7 @@
 * {
 	box-sizing: border-box;
 	margin: 0px;
+	font-family: 'Roboto';
 }
 
 html, body {
@@ -20,7 +21,7 @@ html, body {
 	background-color: #f2f2f2;
 	width: 100%;
 	height: 60px;
-	border-bottom: 3px solid black;
+	border-bottom: 3px solid gray;
 }
 
 #header h1 {
@@ -42,7 +43,7 @@ html, body {
 #main {
 	width: 100%;
 	height: 100%;
-	background-color: #8bf5dc;
+	border-radius: 10px;
 }
 
 
@@ -50,31 +51,34 @@ html, body {
 	float: left;
 	height: 100%;
 	width: 20%;
-	background-color: #e8daf4;
+	background-color: #f2f2f2;
+	border-bottom-left-radius: 10px;
 }
 
 #left-1 {
 	padding-left: 10px;
 	padding-top: 10px;
 	height: 50%;
-	background-color: #7a9fe9;
-	border-right: 3px solid black;
-	border-bottom: 3px solid black;
+	background-color: #f2f2f2;
+	border-right: 3px solid gray;
+	border-bottom: 3px solid gray;
 }
 
 #left-2 {
 	padding-left: 10px;
 	padding-top: 10px;
 	height: 50%;
-	background-color: #aa0e8b;
-	border-right: 3px solid black;
+	background-color: #f2f2f2;
+	border-right: 3px solid gray;
+	border-bottom-left-radius: 10px;
 }
 
 #right {
 	float: left;
 	height: 100%;
 	width: 80%;
-	background-color: #ffe6b3;
+	background-color: #f2f2f2;
+	border-bottom-right-radius: 10px;
 }
 
 #content {
@@ -83,5 +87,6 @@ html, body {
 	margin: 50px;
 	width: calc(100% - 100px);
 	height: calc(100% - 100px);
-	background-color: #ff7366;
+	background-color: #c1c1c1;
+	border-radius: 10px;
 }

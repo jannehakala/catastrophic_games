@@ -3,6 +3,7 @@
 <html>
 	<head>
 	<title>Scarabeus</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="mainstyles.css">
 </head>
 <body>
