@@ -1,12 +1,11 @@
 <?php
-// Connecting, selecting database
-AWS::SCARABEUS::Base.establish_connection!(
-  :host   => ENV['HOST_KEY'],
-  :dbname => ENV['DB_KEY'],
-  :user   => EVL['USER_KEY'],
-  :password=>EVL['PASSWORD_KEY']
-)
-$db = pg_connect("host dbname user password")
+
+$host = getenv('HOST_KEY');
+$dbname = getenv('DB_KEY');
+$user = getenv('USER_KEY');
+$password = getenv('PASSWORD_KEY');
+
+$db = pg_connect("host=$host dbname=$dbname user=$user password=$password")
     or die('Could not connect: ' . pg_last_error());
 
 
