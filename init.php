@@ -8,21 +8,20 @@ $db = pg_connect("host=ec2-54-83-56-31.compute-1.amazonaws.com dbname=d9m4a5line
 
 
    $sql =<<<EOF
-      CREATE TABLE EXERCISE
-      (ID INT PRIMARY KEY     NOT NULL,
-      INFO           TEXT,
-	  EXECATEGORY_ID	INT,
-	  EXECATEGORY_EXERCISE  INT references EXECATEGORY(ID) 
-	  );
+        select * from information_schema.tables
 EOF;
 
-$ret = pg_query($db, $sql);
+   $ret = pg_query($db, $sql);
    if(!$ret){
       echo pg_last_error($db);
-   } else {
-      echo "taulu luotiin jes\n";
+      exit;
+   } 
+   while($row = pg_fetch_row($ret)){
+    echo   $row[0] . "\n";
+      echo  $row[1] ."\n";
+      echo  $row[2] ."\n";
+      
    }
-
 
 pg_close($dbconn);
 
