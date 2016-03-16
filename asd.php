@@ -14,7 +14,7 @@ error_reporting(-1);
 
 require_once("dbinit.php");
 require_once("User.class.php");
-$user = new User();
+$user = new User($db);
 $nameErr = "";
 $emailErr = "";
 $passErr = "";
