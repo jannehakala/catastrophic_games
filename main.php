@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['login_user'])) {
+	header("Location: /");
+	exit();
+}
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -42,7 +50,6 @@
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor a nisi sit amet aliquet. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque ullamcorper tellus turpis, non maximus orci hendrerit eu. Suspendisse eu erat a dui mattis euismod. Donec eleifend gravida dolor ut ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in venenatis ex. Pellentesque aliquet odio nec eros auctor facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 
 					</p>
-					<a href="dbinit.php">klikkaa</a>
 				</div>
 			</div>
 		</div>		
