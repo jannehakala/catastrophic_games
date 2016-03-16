@@ -20,7 +20,7 @@
 				<div id="left-1">
 					<h2>Exercises</h2>
 					<ul>
-						<li><a href="llquiz.html">Exercise 1</a></li>
+						<li><a href="llquiz.html">Lääkeluokitukset</a></li>
 						<li>Exercise 1</li>
 						<li>Exercise 2</li>
 						<li>Exercise 3</li>

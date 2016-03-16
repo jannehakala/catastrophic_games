@@ -8,8 +8,9 @@
 </head>
 
 <?php
-include "dbinit.php";
-
+require_once("dbinit.php");
+require_once("User.class.php");
+$user = new User();
 $nameErr = "";
 $emailErr = "";
 $passErr = "";
@@ -70,16 +71,21 @@ if (isset($_POST['register'])) {
 		//$message = "Great success";
 
 		// TIETOKANTAYHTEYS JA TIEDON SYÖTTÖ KANTAAN
-		$query = "INSERT INTO users(name, password) VALUES('" . $username . "', '" . $password . "')"; 
-		$result = pg_query($query);
+		// $query = "INSERT INTO users(name, password) VALUES('" . $username . "', '" . $password . "')"; 
+		// $result = pg_query($query);
 
-		if (!$result) {
-			$errormessage = pg_last_error();
-			echo "Error: " . $errormessage;
-			exit();
-		}
-		else {
-			echo "Success";
+		// if (!$result) {
+		// 	$errormessage = pg_last_error();
+		// 	echo "Error: " . $errormessage;
+		// 	exit();
+		// }
+		// else {
+		// 	echo "Success";
+		// }
+		if ($user->register($username, $password)) {
+			echo "Käyttäjätunnus luotu onnistuneesti";
+		} else {
+			echo "Käyttäjätunnuksen luonti epäonnistui!";
 		}
 
 		pg_close();
