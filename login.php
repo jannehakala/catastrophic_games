@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$error='';
+$_SESSION['error'] = '';
 require_once("dbinit.php");
 require_once("User.class.php");
 $user = new User($db);
@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
             exit();
         }
         else {
-            $error = "Wrong username of password";
+            $_SESSION['error'] = "Wrong username of password";
             header("Location: /");
             exit();
         }
