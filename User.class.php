@@ -10,7 +10,7 @@ class User {
 
     public function login($username, $password)
     {
-        $stmt = pg_query($db, "select password from users where name = " . $username);
+        $stmt = pg_query($this->db, "select password from users where name = " . $username);
         $row = pg_fetch_row($stmt);
         if ($row['password'] == $password) {
             $_SESSION['login_user'] = $username;
