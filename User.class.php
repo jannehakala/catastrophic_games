@@ -8,8 +8,6 @@ class User {
         $this->db = $db;
     }
 
-    function __construct() {}
-
     public function login($username, $password)
     {
         $stmt = pg_query($this->db, "select password from users where name = '" . $username ."'");
@@ -20,11 +18,6 @@ class User {
         } else {
             return false;
         }
-    }
-
-    public function logout()
-    {
-        unset($_SESSION['login_user']);
     }
 
     public function register($username, $password)
