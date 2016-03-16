@@ -8,6 +8,10 @@
 </head>
 
 <?php
+ini_set('display_startup_errors',1);
+ini_set('display_errors',1);
+error_reporting(-1);
+
 require_once("dbinit.php");
 require_once("User.class.php");
 $user = new User();
@@ -101,7 +105,7 @@ if (isset($_POST['register'])) {
 		<input type="text" name="username"><span class="error"> * <?php echo $nameErr; ?></span><br>
 		Password:<br>
 		<input type="password" name="password"><span class="error"> * <?php echo $passErr; ?></span><br>
-		<input type="submit" name="register" content="Register">
+		<input type="submit" name="register" content="Register" value="Register">
 		<br><span> <?php echo $message; ?></span>
 	</form>
 </body>

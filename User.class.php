@@ -22,15 +22,14 @@ class User {
 
     public function register($username, $password)
     {
-        $query = "INSERT INTO users(name, password) VALUES('" . $username . "', '" . $password . "')"; 
-        $result = pg_query($this->db, $query);
+        // $query = "INSERT INTO users(name, password) VALUES('" . $username . "', '" . $password . "')"; 
+        $result = pg_query($this->db, "INSERT INTO users(name, password) VALUES('" . $username . "', '" . $password . "')");
 
-        if (!$result) {
-            $errormessage = pg_last_error();
-            return false;
+        if ($result) {
+            return true;
         }
         else {
-            return true;
+            return false;
         }
     }
 
