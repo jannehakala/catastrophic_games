@@ -1,6 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Register</title>
 	<style>
 		.error {color: #FF0000;}
@@ -55,39 +56,13 @@ if (isset($_POST['register'])) {
 		if (!preg_match('/^(?=.*\d)(?=.*[A-Öa-ö])[0-9A-Öa-ö!@#$%&\/\(\)=\[\]\{\}]{8,}$/', $password)) {
 			$passErr = "Password must be minimum 8 character and contain letter, numbers, spaces and special letters";
 		}
-		/*
-		if (!preg_match('/^[a-öA-Ö0-9]$/', $password)) {
-			$passErr = "Password must contain letters and numbers";
-		}
-		
-		if (!preg_match('/^[0-9]$/', $password)) {
-			$passErr = "Password must contain numbers";
-		}
-		
-		if (strlen($password) < 8) {
-			$passErr = "Password must be minimum 8 characters";
-		}
-		*/
-
 	}
 
 	if (empty($nameErr) && empty($emailErr) && empty($passErr)) {
-		//$message = "Great success";
-
-		// TIETOKANTAYHTEYS JA TIEDON SYÖTTÖ KANTAAN
-		// $query = "INSERT INTO users(name, password) VALUES('" . $username . "', '" . $password . "')"; 
-		// $result = pg_query($query);
-
-		// if (!$result) {
-		// 	$errormessage = pg_last_error();
-		// 	echo "Error: " . $errormessage;
-		// 	exit();
-		// }
-		// else {
-		// 	echo "Success";
-		// }
 		if ($user->register($username, $password)) {
 			echo "Käyttäjätunnus luotu onnistuneesti";
+			header("Location: /");
+			exit();
 		} else {
 			echo "Käyttäjätunnuksen luonti epäonnistui!";
 		}

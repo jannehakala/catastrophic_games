@@ -20,10 +20,12 @@ if (isset($_POST['submit'])) {
         if ($user->login($username, $password)) {
             $error = "Toimii";
             header("Location: /main.php");
+            exit();
         }
         else {
             $error = "Wrong username of password";
             header("Location: /");
+            exit();
         }
     }
 }
