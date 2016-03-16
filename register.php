@@ -74,12 +74,12 @@ if (isset($_POST['register'])) {
 
 <body>
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
-		Email:<br>
-		<input type="text" name="email"><span class="error"> * <?php echo $emailErr; ?></span><br>
 		Username:<br>
 		<input type="text" name="username"><span class="error"> * <?php echo $nameErr; ?></span><br>
 		Password:<br>
 		<input type="password" name="password"><span class="error"> * <?php echo $passErr; ?></span><br>
+		Email:<br>
+		<input type="text" name="email"><span class="error"> * <?php echo $emailErr; ?></span><br>
 		<input type="submit" name="register" content="Register" value="Register">
 		<br><span> <?php echo $message; ?></span>
 	</form>
