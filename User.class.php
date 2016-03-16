@@ -14,7 +14,7 @@ class User {
 
             $stmt = pg_query($this->db, "select password from users where name = '" . $username ."'");
             $row = pg_fetch_row($stmt);
-            if ($row['password'] == $password) {
+            if ($row[0] == $password) {
                 $_SESSION['login_user'] = $username;
                 return true;
             } else {
