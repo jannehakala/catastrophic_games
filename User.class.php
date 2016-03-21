@@ -12,7 +12,7 @@ class User {
     {
         $stmt = pg_query($this->db, "select password from users where name = '" . $username ."'");
         $row = pg_fetch_row($stmt);
-        if ($row[0] == $password) {
+        if (password_verify($password, $row[0])) {
             $_SESSION['login_user'] = $username;
             return true;
         } else {
@@ -22,7 +22,8 @@ class User {
 
     public function register($username, $password)
     {
-        $result = pg_query($this->db, "INSERT INTO users(name, password) VALUES('" . $username . "', '" . $password . "')");
+        $pw = password_hash($password, PASSWORD_BCRYPT);
+        $result = pg_query($this->db, "INSERT INTO users(name, password) VALUES('" . $username . "', '" . $pw . "')");
 
         if ($result) {
             return true;
