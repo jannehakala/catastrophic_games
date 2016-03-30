@@ -3,11 +3,8 @@ ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
 error_reporting(-1);
 
-function set_stats(){
+function set_stats($username, $exercise, $value){
 require_once("dbinit.php");
-	$username= 'Teemu';
-	$exercise = 'drugcalculations';
-	$value = 2;
 	$sql = <<<SQL
 	INSERT INTO exercise_user(points, "User_id", "Exercise_id") VALUES($value,(select id from users where name = '$username'), (select id from exercise where info = '$exercise'));		
 SQL;
