@@ -25,10 +25,11 @@ require_once("dbinit.php");
 SQL;
 	$stmt = pg_query($db, $sql);
 	$arr = pg_fetch_array($stmt);
-	echo $arr[0];
-	/*while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    	echo "<tr><td>".$row['User_id']."</td><td>".$row['points']."</td></tr>\n";
-	}*/
+	$arr['0'];
+	$apu = 0;
+	while($arr[$apu] != NULL) {
+    	echo "<tr><td>admin</td><td>".$arr['0']."</td></tr>\n";
+	}
 	echo "</tbody></table>";
 }
 
