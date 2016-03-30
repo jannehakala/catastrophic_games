@@ -24,7 +24,7 @@ include ("header.php");
                         Lääkelaskut.
                     </p>        
                     <p style="margin-top: 20px;">
-                        <form method="GET" action="quizview.php">
+                        <form method="POST" action="quizview.php">
                             <input type="submit" value="startquiz">
                             <input type="hidden" name="quiztype" value="laskuquiz">
                         </form>

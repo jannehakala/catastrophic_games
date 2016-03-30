@@ -4,6 +4,7 @@ require_once("drugdbinit.php");
 require_once("Question.class.php");
 
 if (!isset($_SESSION['question'])) $_SESSION['question'] = 0;
+if (!isset($_SESSION['score'])) $_SESSION['score'] = 0;
 
 if (isset($_POST['next'])) {
     $_SESSION['question'] += 1;
