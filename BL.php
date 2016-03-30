@@ -26,7 +26,7 @@ SQL;
 	$stmt = pg_query($db, $sql);
 	
 	$apu = 0;
-	while($arr = pg_fetch_array($stmt,$apu,PGSQL_ASSOC);) {
+	while($arr = pg_fetch_array($stmt,$apu,PGSQL_ASSOC)) {
     	echo "<tr><td>admin</td><td>".$arr['points']."</td></tr>\n";
 		$apu++;
 	}
