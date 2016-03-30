@@ -4,6 +4,7 @@ ini_set('display_errors',1);
 error_reporting(-1);
 include("header.php");
 include("drugdbinit.php");
+include("BL.php");
 
 ?>
 		<div id="main">
@@ -19,6 +20,7 @@ include("drugdbinit.php");
 				</div>
 				<div id="left-2">
 					<h2>Statistics</h2>
+				<?php	get_stats($_SESSION['login_user']) ?>
 				</div>
 			</div>
 			

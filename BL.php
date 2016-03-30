@@ -22,11 +22,11 @@ require_once("dbinit.php");
 	$sql = <<<SQL
 	select points from exercise_user where "User_id" = (select id from users where name = '$username');
 SQL;
-	$stmt = pg_query($db, "select* from exercise_user where  = (select id from users where name = '" . $username ."')");
+	$stmt = pg_query($db, $sql);
 	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     	echo "<tr><td>{$row['User_id']}</td><td>{$row['points']}</td></tr>\n";
 	}
-	echo "</tbody></table>";*/
+	echo "</tbody></table>";
 }
 
 ?>
