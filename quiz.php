@@ -4,6 +4,8 @@ session_start();
 require_once("drugdbinit.php");
 require_once("Question.class.php");
 
+if (!isset($_SESSION['question'])) $_SESSION['question'] = 0;
+
 if (isset($_POST['next'])) {
     $_SESSION['question'] += 1;
     if ($_POST['ans'] == $_SESSION['correct_answer']) {

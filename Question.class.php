@@ -42,9 +42,8 @@ class VaikuttavaAine {
         foreach ($this->choices as $choice) {
             echo "<input type=radio name=ans value={$choice}>{$choice}<br>";
         }
-        echo "<input type=submit name=submit value=Seuraava>";
+        echo "<input type=submit name=next value=Seuraava>";
         echo "</form>";
-
     }
 }
 
