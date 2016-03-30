@@ -15,7 +15,8 @@ require_once("dbinit.php");
 	echo "<table>\n"; 
 	echo '<thead>
 			<tr>
-			<th>USERID</th>
+			<th>userid</th>
+			<th>points</th>
 			</tr>
 			</thead>
 			<tbody>';
@@ -23,9 +24,11 @@ require_once("dbinit.php");
 	select points from exercise_user where "User_id" = (select id from users where name = '$username');
 SQL;
 	$stmt = pg_query($db, $sql);
-	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+	$arr = pg_fetch_array($stmt, 0, PGSQL_NUM);
+	echo $arr[0]. "<---- TASSSA";
+	/*while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     	echo "<tr><td>".$row['User_id']."</td><td>".$row['points']."</td></tr>\n";
-	}
+	}*/
 	echo "</tbody></table>";
 }
 
