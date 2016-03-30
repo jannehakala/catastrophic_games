@@ -1,12 +1,11 @@
 <?php
 
-function set_sats($value, $username){
+function set_stats($value, $username){
 	$result = pg_query($this->db, "INSERT INTO exercise_user(points) VALUES('" . $value . "') WHERE User_id = (select id from users where name = '" . $username ."')");	
 }
-function get_stats(){
- /*  
+function get_stats($username){ 
  //pohhjaaaa
- echo "<table>\n"; 
+ /*echo "<table>\n"; 
 	echo '<thead>
 		<tr>
 		<th>USERID</th>
