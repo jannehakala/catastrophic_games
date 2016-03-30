@@ -90,7 +90,7 @@ class Laakelasku {
     public function printQuestion()
     {
         printf($this->template, $this->weight);
-        echo "<form>";
+        echo "<form method=POST>";
         foreach ($this->choices as $choice) {
             echo "<input type=radio name=ans value={$choice}>{$choice} ml<br>";
         }
