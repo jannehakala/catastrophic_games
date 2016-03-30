@@ -25,7 +25,7 @@ require_once("dbinit.php");
 SQL;
 	$stmt = pg_query($db, $sql);
 	$arr = pg_fetch_array($stmt);
-	echo $arr['points'];
+	echo $arr[0];
 	/*while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     	echo "<tr><td>".$row['User_id']."</td><td>".$row['points']."</td></tr>\n";
 	}*/
