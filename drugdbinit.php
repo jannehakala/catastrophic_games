@@ -2,7 +2,7 @@
 <?php
 
 $host = getenv('MYSQL_HOST_KEY');
-$dbname = getenv('MYSQL_DB_KEY');
+$dbname = getenv('MYSQL_DB_NAME');
 $user = getenv('MYSQL_USER');
 $pw = getenv('MYSQL_PW');
 
