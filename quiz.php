@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once("drugdbinit.php")
+require_once("drugdbinit.php");
 require_once("Question.class.php");
 
 if (isset($_POST['next'])) {
