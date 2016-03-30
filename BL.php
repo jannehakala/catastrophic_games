@@ -25,7 +25,6 @@ require_once("dbinit.php");
 SQL;
 	$stmt = pg_query($db, $sql);
 	$arr = pg_fetch_array($stmt);
-	$arr['0'];
 	$apu = 0;
 	while($arr[$apu] != NULL) {
     	echo "<tr><td>admin</td><td>".$arr[$apu]."</td></tr>\n";
