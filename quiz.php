@@ -13,14 +13,24 @@ if (isset($_POST['next'])) {
     header("Location: " . $_SERVER['PHP_SELF']);
     exit();
 }
-if ($_SESSION['question'] == 5) {
+if ($_SESSION['question'] == 10) {
     $_SESSION['question'] = 0;
     header("Location: resultview.php");
     exit();
 }
 
-echo "<h1>Question " . ($_SESSION['question']+1) ." / 5</h1><br>";
-$question = new VaikuttavaAine($db_mysql);
+echo "<h1>Question " . ($_SESSION['question']+1) ." / 10</h1><br>";
+switch ($_SESSION['quiztype']) {
+    case 'ainequiz':
+        $question = new VaikuttavaAine($db_mysql);
+        break;
+    case 'laskuquiz':
+        $question = new Laakelasku();
+        break;
+    default:
+        $question = new VaikuttavaAine($db_mysql);
+        break;
+}
 $question->printQuestion();
 
 ?>

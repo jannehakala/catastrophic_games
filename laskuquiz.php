@@ -19,14 +19,14 @@ include ("header.php");
 
             <div id="right">
                 <div id="content">
-                    <h2>Lääkeluokitukset</h2>
+                    <h2>Lääkelaskut</h2>
                     <p style="margin-top: 20px;">
-                        Tunnista lääkevalmisteiden vaikuttavat aineet.
+                        Lääkelaskut.
                     </p>        
                     <p style="margin-top: 20px;">
                         <form method="GET" action="quizview.php">
                             <input type="submit" value="startquiz">
-                            <input type="hidden" name="quiztype" value="ainequiz">
+                            <input type="hidden" name="quiztype" value="laskuquiz">
                         </form>
                     </p>
                 </div>

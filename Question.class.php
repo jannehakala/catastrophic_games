@@ -72,6 +72,7 @@ class Laakelasku {
     {
         $this->weight = rand(20, 35);
         $this->answer = number_format(round(40 * $this->weight / 50 / 3, 2), 2);
+        $_SESSION['correct_answer'] = $this->answer;
         $alt1 = number_format(round($this->answer - rand(-2, 2) * (mt_rand() / mt_getrandmax()), 2), 2);
         while ($alt1 == $this->answer) {
             $alt1 = number_format(round($this->answer - rand(-2, 2) * (mt_rand() / mt_getrandmax()), 2), 2);
@@ -93,7 +94,7 @@ class Laakelasku {
         foreach ($this->choices as $choice) {
             echo "<input type=radio name=ans value={$choice}>{$choice} ml<br>";
         }
-        echo "<input type=submit name=submit value=Seuraava>";
+        echo "<input type=submit name=next value=Seuraava>";
         echo "</form>";
     }
 }

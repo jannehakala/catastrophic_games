@@ -2,13 +2,19 @@
 include ("header.php")
 ?>
 
-		<div id="main">
-			<div id="content">
-				<?php
-					include ("quiz.php");
-				?>
-			</div>
-		</div>
-	</div>
+        <div id="main">
+            <div id="content">
+                <?php
+                    if (isset($_POST['quiztype'])) {
+                        $_SESSION['quiztype'] = $_POST['quiztype'];
+                    }
+                    else {
+                        $_SESSION['quiztype'] = 'ainequiz';    
+                    }
+                    include ("quiz.php");
+                ?>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
