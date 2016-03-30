@@ -1,5 +1,7 @@
 <?php
 include("header.php");
+require_once("drugdbinit.php");
+
 ?>
 		<div id="main">
 			<div id="left">
@@ -22,6 +24,14 @@ include("header.php");
 					<h2>Quiz</h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor a nisi sit amet aliquet. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque ullamcorper tellus turpis, non maximus orci hendrerit eu. Suspendisse eu erat a dui mattis euismod. Donec eleifend gravida dolor ut ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in venenatis ex. Pellentesque aliquet odio nec eros auctor facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 
+					</p>
+					<p>
+						<?php
+						$stmt = $db_mysql->query("select ainenimi from laakeaine order by rand() limit 5;");
+						while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+							echo $row['ainenimi'] . "<br>";
+						}
+						?>
 					</p>
 				</div>
 			</div>
