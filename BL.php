@@ -24,11 +24,10 @@ require_once("dbinit.php");
 	select points from exercise_user where "User_id" = (select id from users where name = '$username');
 SQL;
 	$stmt = pg_query($db, $sql);
-	
 	$apu = 0;
-	while($arr = pg_fetch_array($stmt,$apu,PGSQL_ASSOC) != NULL) {
+	while(($arr = pg_fetch_array($stmt,$apu,PGSQL_ASSOC)) != FALSE) {
     	echo "<tr><td>admin</td><td>".$arr['points']."</td></tr>\n";
-		$apu++;
+		$apu++;	
 	}
 	echo "</tbody></table>";
 }
