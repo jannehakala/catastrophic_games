@@ -27,8 +27,8 @@ SQL;
 	$arr = pg_fetch_array($stmt);
 	$arr['0'];
 	$apu = 0;
-	while($arr[$apu] ) {
-    	echo "<tr><td>admin</td><td>".$arr['0']."</td></tr>\n";
+	while($arr[$apu] != NULL) {
+    	echo "<tr><td>admin</td><td>".$arr[$apu]."</td></tr>\n";
 		$apu++;
 	}
 	echo "</tbody></table>";
