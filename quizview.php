@@ -8,9 +8,7 @@ include ("header.php")
                     if (isset($_POST['quiztype'])) {
                         $_SESSION['quiztype'] = $_POST['quiztype'];
                     }
-                    else {
-                        $_SESSION['quiztype'] = 'ainequiz';    
-                    }
+                    if (!isset($_SESSION['quiztype'])) $_SESSION['quiztype'] = 'ainequiz'
                     include ("quiz.php");
                 ?>
             </div>
