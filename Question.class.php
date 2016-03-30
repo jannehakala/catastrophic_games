@@ -38,7 +38,7 @@ class VaikuttavaAine {
     public function printQuestion()
     {
         printf($this->template, $this->substance);
-        echo "<form>";
+        echo "<form method=POST>";
         foreach ($this->choices as $choice) {
             echo "<input type=radio name=ans value={$choice}>{$choice}<br>";
         }

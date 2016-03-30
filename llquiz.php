@@ -7,7 +7,7 @@ include ("header.php");
 				<div id="left-1">
 					<h2>Exercises</h2>
 					<ul>
-						<li><a href="llquiz.html">Vaikuttavat aineet</a></li>
+						<li><a href="llquiz.php">Vaikuttavat aineet</a></li>
 						<li>Exercise 2</li>
 						<li>Exercise 3</li>
 					</ul>
