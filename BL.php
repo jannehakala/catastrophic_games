@@ -24,7 +24,7 @@ require_once("dbinit.php");
 	select points from exercise_user where "User_id" = (select id from users where name = '$username');
 SQL;
 	$stmt = pg_query($db, $sql);
-	$row = pg_fetch_row($stmt)
+	//$row = pg_fetch_row($stmt)
 	//echo "ID = ".$row[0];
 
 	/*while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
