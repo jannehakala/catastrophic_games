@@ -24,10 +24,9 @@ require_once("dbinit.php");
 	select points from exercise_user where "User_id" = (select id from users where name = '$username');
 SQL;
 	$stmt = pg_query($db, $sql);
-	$arr = pg_fetch_array($stmt, 0, PGSQL_NUM);
-	echo $arr[0]. "<---- id";
-	echo $arr[1]. "<---- id";
-	echo $arr[2]. "<---- id";
+	$row = pg_fetch_row($stmt)
+	echo "ID = ".$row[0]." Points " .$row[1]." ID 2". $row[2];
+
 	/*while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     	echo "<tr><td>".$row['User_id']."</td><td>".$row['points']."</td></tr>\n";
 	}*/
