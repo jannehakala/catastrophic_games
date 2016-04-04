@@ -2,7 +2,7 @@
 ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
 error_reporting(-1);
-public $aarray = array();
+$aarray = array();
 function set_stats($username, $exercise, $value){
 require_once("dbinit.php");
 	$sql = <<<SQL
