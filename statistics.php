@@ -10,6 +10,7 @@ include("drugdbinit.php");
                     <h2>Your stats</h2>                    
                        <?php get_stats($_SESSION['login_user'], 1);
 							tee_graafi(13,12,14);
+							 echo '<div id="donutchart" style="width: 900px; height: 500px;"></div>';
 					   ?>      
 
 					</script>					   
