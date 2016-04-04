@@ -40,7 +40,7 @@ SQL;
                 break; 
         } 
 		}
-		if($number == 1){
+		elseif($number == 1){
 			if ($cnt == 0)  { 
         break; 
         } 	
