@@ -10,7 +10,8 @@ include("drugdbinit.php");
                     <h2>Your stats</h2>                    
                        <?php get_stats($_SESSION['login_user'], 1);
 					   
-						//	echo get_list();
+						  print_r(get_list());
+
 							tee_graafi();
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 					   ?>      
