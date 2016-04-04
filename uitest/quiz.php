@@ -22,14 +22,17 @@ if ($_SESSION['question'] == 10) {
 
 echo "<h1>Question " . ($_SESSION['question']+1) ." / 10</h1><br>";
 switch ($_SESSION['quiztype']) {
-    case 'ainequiz':
-        $question = new VaikuttavaAine($db_mysql);
+    case 'drugidentificationquiz':
+        $question = new DrugIdentification($db_mysql);
         break;
-    case 'laskuquiz':
-        $question = new Laakelasku();
+    case 'drugcalculationquiz':
+        $question = new DrugCalculation();
+        break;
+    case 'unitconversionquiz':
+        $question = new UnitConversion();
         break;
     default:
-        $question = new VaikuttavaAine($db_mysql);
+        $question = new DrugIdentification();
         break;
 }
 $question->printQuestion();
