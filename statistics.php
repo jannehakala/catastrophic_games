@@ -29,7 +29,7 @@ include("drugdbinit.php");
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ["number", "Agents", "Drugcalculations", "Unit conversions"],
+          ["number", "Agents", "Drug calculations", "Unit conversions"],
           ["1",  6,      5,	10],
           ["2",  5,      1, 6],
           ["3",  0,       4, 4],
