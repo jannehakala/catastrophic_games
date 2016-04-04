@@ -1,5 +1,4 @@
 <?php
-session_start();
 include ("header.php");
 ?>
 
@@ -8,15 +7,13 @@ include ("header.php");
 			<div class="row">
 				<div class="col-md-9">
 					<div class="jumbotron">
-						<h2>Drug identifications</h2>
-						<p>Drug identifications</p>
-						
-						<p>
-                        <form method="POST" action="quizview.php">
-                            <input type="submit" value="Start exercise">
-                            <input type="hidden" name="quiztype" value="ainequiz">
-                        </form>
-						</p>
+						<?php
+							if (isset($_POST['quiztype'])) {
+								$_SESSION['quiztype'] = $_POST['quiztype'];
+							}
+							if (!isset($_SESSION['quiztype'])) $_SESSION['quiztype'] = 'ainequiz';
+							include ("quiz.php");
+						?>
 					</div>
 				</div>
 				<div class="col-md-3">
