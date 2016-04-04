@@ -46,7 +46,7 @@ SQL;
 		//STATISTIC SIVU
 		if($number == 1){
 	
-		array_push($stack, "asdasd");			
+		array_push($stack, $apu2, $arr['points']);			
 		array_push($aarray, $stack);
 		unset($stack);
 		$stack = array();		
