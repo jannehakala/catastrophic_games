@@ -2,7 +2,7 @@
 ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
 error_reporting(-1);
-
+public $aarray = array();
 function set_stats($username, $exercise, $value){
 require_once("dbinit.php");
 	$sql = <<<SQL
@@ -32,7 +32,7 @@ SQL;
 	$apu = pg_num_rows($stmt)-1;
 	$apu2;
 	$stack = array();
-	$array = array();
+	
 	
 	while(($arr = pg_fetch_array($stmt,$apu,PGSQL_ASSOC)) ) {
 	$apu2 =	get_exercise($arr['Exercise_id']);
@@ -48,7 +48,7 @@ SQL;
 		if($number == 1){
 	
 		array_push($stack, "asdasd");			
-		array_push($array, $stack);
+		array_push($this-> aarray, $stack);
 		unset($stack);
 		$stack = array();		
 			if ($cnt == 0)  { 
@@ -76,6 +76,6 @@ function get_exercise($arr){
 		return $apu3;
 }
 function get_list(){
-	return $array;
+	return $this->aarray;
 }
 ?>
