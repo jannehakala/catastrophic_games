@@ -36,7 +36,7 @@ $content = <<<CONTENT
 					 <a href="#" data-toggle="dropdown" class="dropdown-toggle">{$_SESSION['login_user']}<strong class="caret"></strong></a>
 					<ul class="dropdown-menu">
 						<li>
-							<a hrefprofile.php">Profile</a>
+							<a href="profile.php">Profile</a>
 						</li>
 						<li class="divider"></li>
 						<li>
