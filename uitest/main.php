@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 include ("header.php");
+include ("BL.php");
 ?>
 	<div class="row">
 		<div class="col-md-12">
@@ -21,42 +22,7 @@ include ("header.php");
 						</ul>
 					</div>
 					<h2>Statistics</h2>
-					<table class="table">
-						<thead>
-							<tr>
-								<th>Exercise</th>
-								<th>Points</th>
-								<th>Date</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Unit conversions</td>
-								<td>7</td>
-								<td>2000-01-30 01:01:01</td>
-								</tr>
-							<tr>
-								<td>Agents</td>
-								<td>4</td>
-								<td>2000-01-30 01:01:01</td>
-							</tr>
-							<tr>
-								<td>Drugcalculations</td>
-								<td>2</td>
-								<td>2000-01-30 01:01:01</td>
-							</tr>
-							<tr>
-								<td>Drugcalculations</td>
-								<td>7</td>
-								<td>2000-01-30 01:01:01</td>
-							</tr>
-							<tr>
-								<td>Drugcalculations</td>
-								<td>5</td>
-								<td>2000-01-30 01:01:01</td>
-							</tr>
-						</tbody>
-					</table>
+					<?php get_stats($_SESSION['login_user'],0); ?>
 				</div>
 				
 			</div>

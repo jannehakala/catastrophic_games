@@ -9,10 +9,6 @@ if (!isset($_SESSION['login_user'])) {
     header("Location: /");
     exit();
 }
-
-include ("BL.php");
-
-
 $content = <<<CONTENT
 <html lang="en">
   <head>
@@ -53,6 +49,4 @@ $content = <<<CONTENT
 	</div>
 CONTENT;
 echo $content;
-get_stats($_SESSION['login_user'],0);
-echo "</div></div>";
 ?>
