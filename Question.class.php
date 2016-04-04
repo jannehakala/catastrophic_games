@@ -1,6 +1,8 @@
 ﻿<?php
 
-
+ini_set('display_startup_errors',1);
+ini_set('display_errors',1);
+error_reporting(-1);
 class DrugIdentification {
 
     protected $template;
@@ -23,7 +25,7 @@ class DrugIdentification {
 
     protected function makeQuestion()
     {
-        $result = $this->db->query("select laakenimi, ainenimi from pakkaus join laakeaine on pakkaus.pakkausnro = laakeaine.pakkausnro order by rand() limit 3");
+        $result = $this->db->query("select distinct laakenimi, ainenimi from pakkaus join laakeaine on pakkaus.pakkausnro = laakeaine.pakkausnro where laakemuototun = 994 or laakemuototun = 889 or laakemuototun = 839 or laakemuototun = 565 or laakemuototun = 562 or laakemuototun = 535 or laakemuototun = 510 or laakemuototun = 334 order by rand() limit 3;");
         $row = $result->fetch(PDO::FETCH_ASSOC);
         $this->substance = $row['laakenimi'];
         $this->answer = $row['ainenimi'];
@@ -99,14 +101,18 @@ class DrugCalculation {
     }
 }
 
+function printf_array($format, $arr)
+{
+    return call_user_func_array('printf', array_merge((array)$format, $arr));
+} 
 
 class UnitConversion {
     
     private $choices = array();
 
     private $templates = array(
-        "ölksajfdölksajdflöaksjf",
-        "oimnbteroiujnvierunvieurnv"
+        "Lääkäri on määrännyt potilaalle lääkettä %d mikrogrammaa. Tabletin vahvuus on %.2f milligrammaa.<br>
+        Montako tablettia potilaalle annetaan?"
     );
     
     function __construct()
@@ -117,15 +123,20 @@ class UnitConversion {
     
     protected function makeQuestion()
     {
-        array_push($this->choices, "asd");
-        array_push($this->choices, "gfds");
-        array_push($this->choices, "dsa");
+        $this->startunit = 50;
+        $this->concentration = mt_rand(1, 50) / 100;
+        $this->answer = round($this->startunit / ($this->concentration * 1000), 2);
+        $_SESSION['correct_answer'] = $this->answer;
+        array_push($this->choices, $this->answer);
+        array_push($this->choices, round($this->answer + mt_rand(-20, 20) / 100, 2));
+        array_push($this->choices, round($this->answer + mt_rand(-20, 20) / 100, 2));
         shuffle($this->choices);
     }
     
     public function printQuestion()
     {
-        printf($this->template);
+        $data = array($this->startunit, $this->concentration);
+        printf_array($this->template, $data);
         echo "<form method=POST>";
         foreach ($this->choices as $choice) {
             echo "<input type=radio name=ans value={$choice}>{$choice}<br>";
