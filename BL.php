@@ -15,21 +15,24 @@ require_once("dbinit.php");
 	echo "<table>\n"; 
 	echo '<thead>
 			<tr>
-			<th>userid</th>
+			<th>Exercise</th>
 			<th>points</th>
 			<th>Date</th>
 			</tr>
 			</thead>
 			<tbody>';
 	$sql = <<<SQL
-	select points,solve_date from exercise_user where "User_id" = (select id from users where name = '$username');
+	select points,solve_date,"Exercise_id" from exercise_user where "User_id" = (select id from users where name = '$username');
 SQL;
+
 	
 	$stmt = pg_query($db, $sql);
 	$cnt = pg_num_rows($stmt)-1;
 	$apu = 0;
+	$apu2;
 	while(($arr = pg_fetch_array($stmt,$apu,PGSQL_ASSOC)) ) {
-    	echo "<tr><td>admin</td><td>".$arr['points']."</td><td>".$arr['solve_date']."</td></tr>\n";
+	$apu2 =	get_exercise($arr['Exercise_id']);
+    	echo "<tr><td>".$apu2."</td><td>".$arr['points']."</td><td>".$arr['solve_date']."</td></tr>\n";
 		$apu++;	
 		if ($cnt == 0)  { 
                 break; 
@@ -37,6 +40,22 @@ SQL;
 		$cnt--; 
 	}
 	echo "</tbody></table>";
+}
+function get_exercise($arr){
+		$apu2 ="";
+		if( $arr = 1){
+			$apu2 = "Drugcalculations";
+		}
+		elseif($arr = 2){
+			$apu2 = "Agents"
+		}
+		elseif($arr = 3){
+			$apu2 = "Unit conversions";
+		}
+		else{
+			$apu2	= "unkown";
+		}
+		return $apu2;
 }
 
 ?>
