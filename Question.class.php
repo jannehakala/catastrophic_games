@@ -1,7 +1,7 @@
 ﻿<?php
 
 
-class VaikuttavaAine {
+class DrugIdentification {
 
     protected $template;
     protected $substance;
@@ -48,7 +48,7 @@ class VaikuttavaAine {
 }
 
 
-class Laakelasku {
+class DrugCalculation {
     
     private $weight;
     private $choices = array();
@@ -93,6 +93,42 @@ class Laakelasku {
         echo "<form method=POST>";
         foreach ($this->choices as $choice) {
             echo "<input type=radio name=ans value={$choice}>{$choice} ml<br>";
+        }
+        echo "<input type=submit name=next value=Seuraava>";
+        echo "</form>";
+    }
+}
+
+
+class UnitConversion {
+    
+    private $choices = array();
+
+    private $templates = array(
+        "ölksajfdölksajdflöaksjf",
+        "oimnbteroiujnvierunvieurnv"
+    );
+    
+    function __construct()
+    {
+        $this->makeQuestion();
+        $this->template = $this->templates[array_rand($this->templates, 1)];
+    }
+    
+    protected function makeQuestion()
+    {
+        array_push($this->choices, "asd");
+        array_push($this->choices, "gfds");
+        array_push($this->choices, "dsa");
+        shuffle($this->choices);
+    }
+    
+    public function printQuestion()
+    {
+        printf($this->template);
+        echo "<form method=POST>";
+        foreach ($this->choices as $choice) {
+            echo "<input type=radio name=ans value={$choice}>{$choice}<br>";
         }
         echo "<input type=submit name=next value=Seuraava>";
         echo "</form>";

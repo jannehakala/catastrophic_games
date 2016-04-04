@@ -1,5 +1,7 @@
 
-<?php session_start() ?>
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 
@@ -24,14 +26,14 @@
         </div>
             <div id="main">
                 <div id="content">
-                    <h2>Drug calculations</h2>
+                    <h2>Unit conversions.</h2>
                     <p style="margin-top: 20px;">
-                        Drug calculations
+                        Unit conversions.
                     </p>        
                     <p style="margin-top: 20px;">
                         <form method="POST" action="quizview.php">
                             <input type="submit" value="Start">
-                            <input type="hidden" name="quiztype" value="drugcalculationquiz">
+                            <input type="hidden" name="quiztype" value="unitconversionquiz">
                         </form>
                     </p>
                 </div>
