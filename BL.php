@@ -10,7 +10,7 @@ require_once("dbinit.php");
 SQL;
 	$result = pg_query($db, $sql);	
 }
-function get_stats($username){ 
+function get_stats($username, $number){ 
 require_once("dbinit.php");
 	echo "<table>\n"; 
 	echo '<thead>
@@ -35,9 +35,16 @@ SQL;
 	$apu2 =	get_exercise($arr['Exercise_id']);
     	echo "<tr><td>".$apu2."</td><td>".$arr['points']."</td><td>".$arr['solve_date']."</td></tr>\n";
 		$apu--;	
-		if ($cnt == 0 || $cnt == $cnt2)  { 
+		if($number == 0){
+			if ($cnt == 0 || $cnt == $cnt2)  { 
                 break; 
         } 
+		}
+		if($number == 1){
+			if ($cnt == 0)  { 
+        break; 
+        } 	
+		}
 		$cnt--; 
 	}
 	echo "</tbody></table>";
