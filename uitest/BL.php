@@ -11,7 +11,7 @@ SQL;
 }
 function get_stats($username, $number){ 
 include("dbinit.php");
-	echo "<table>\n"; 
+	echo "<table class='table'>\n"; 
 	echo '<thead>
 			<tr>
 			<th>Exercise</th>
