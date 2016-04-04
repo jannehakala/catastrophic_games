@@ -28,13 +28,14 @@ SQL;
 	
 	$stmt = pg_query($db, $sql);
 	$cnt = pg_num_rows($stmt)-1;
+	$cnt2 = pg_num_rows($stmt)-5;
 	$apu = 0;
 	$apu2;
 	while(($arr = pg_fetch_array($stmt,$apu,PGSQL_ASSOC)) ) {
 	$apu2 =	get_exercise($arr['Exercise_id']);
     	echo "<tr><td>".$apu2."</td><td>".$arr['points']."</td><td>".$arr['solve_date']."</td></tr>\n";
 		$apu++;	
-		if ($cnt == 0)  { 
+		if ($cnt == 0 || $cnt == $cnt2;)  { 
                 break; 
         } 
 		$cnt--; 
