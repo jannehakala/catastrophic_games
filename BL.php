@@ -2,7 +2,7 @@
 ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
 error_reporting(-1);
-$array = array();
+//$array = array();
 function set_stats($username, $exercise, $value){
 require_once("dbinit.php");
 	$sql = <<<SQL
@@ -45,7 +45,7 @@ SQL;
 		//STATISTIC SIVU
 		if($number == 1){
 	
-			array_push($array,list( $apu2, $arr['points']));			
+			//array_push($array,list( $apu2, $arr['points']));			
 			if ($cnt == 0)  { 
         break; 
         } 	
