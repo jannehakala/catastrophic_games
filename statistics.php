@@ -9,7 +9,7 @@ include("drugdbinit.php");
                 <div id="content">
                     <h2>Your stats</h2>
                     <p>
-                       <?php get_stat($_SESSION['login_user'], 1);?>
+                       <?php get_stats($_SESSION['login_user'], 1);?>
                     </p>
                 </div>
             </div>
