@@ -99,6 +99,11 @@ class DrugCalculation {
     }
 }
 
+function printf_array($format, $arr)
+{
+    return call_user_func_array('printf', array_merge((array)$format, $arr));
+} 
+
 class UnitConversion {
     
     private $choices = array();
