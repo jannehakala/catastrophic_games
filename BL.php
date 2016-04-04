@@ -46,10 +46,10 @@ function get_exercise($arr){
 		if($arr = 1){
 			$apu2 = "Drugcalculations";
 		}
-		elseif($arr = 2){
+		if($arr = 2){
 			$apu2 = "Agents";
 		}
-		elseif($arr = 3){
+		if($arr = 3){
 			$apu2 = "Unit conversions";
 		}
 		else{
