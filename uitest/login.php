@@ -2,9 +2,9 @@
 
 session_start();
 $_SESSION['error'] = '';
-//require_once("dbinit.php");
-//require_once("User.class.php");
-//$user = new User($db);
+require_once("dbinit.php");
+require_once("User.class.php");
+$user = new User($db);
 
 if (isset($_POST['submit'])) {
     if (empty($_POST['username']) || empty($_POST['password'])) {
