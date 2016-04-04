@@ -35,7 +35,7 @@ SQL;
 	$apu2 =	get_exercise($arr['Exercise_id']);
     	echo "<tr><td>".$apu2."</td><td>".$arr['points']."</td><td>".$arr['solve_date']."</td></tr>\n";
 		$apu++;	
-		if ($cnt == 0 || $cnt == $cnt2;)  { 
+		if ($cnt == 0 || $cnt == $cnt2)  { 
                 break; 
         } 
 		$cnt--; 
