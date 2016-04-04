@@ -43,11 +43,11 @@ SQL;
 }
 function get_exercise($arr){
 		$apu2 ="";
-		if( $arr = 1){
+		if($arr = 1){
 			$apu2 = "Drugcalculations";
 		}
 		elseif($arr = 2){
-			$apu2 = "Agents"
+			$apu2 = "Agents";
 		}
 		elseif($arr = 3){
 			$apu2 = "Unit conversions";
