@@ -32,7 +32,7 @@ switch ($_SESSION['quiztype']) {
         $question = new UnitConversion();
         break;
     default:
-        $question = new DrugIdentification();
+        $question = new DrugIdentification($db_mysql);
         break;
 }
 $question->printQuestion();

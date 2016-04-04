@@ -30,7 +30,7 @@ session_start();
                     if (isset($_POST['quiztype'])) {
                         $_SESSION['quiztype'] = $_POST['quiztype'];
                     }
-                    if (!isset($_SESSION['quiztype'])) $_SESSION['quiztype'] = 'ainequiz';
+                    if (!isset($_SESSION['quiztype'])) $_SESSION['quiztype'] = 'drugidentificationquiz';
                     include ("quiz.php");
                 ?>
             </div>
