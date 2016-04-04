@@ -12,7 +12,7 @@ include ("BL.php");
 						<p>
                         <form method="POST" action="quizview.php">
                             <input type="submit" value="Start exercise">
-                            <input type="hidden" name="quiztype" value="laskuquiz">
+                            <input type="hidden" name="quiztype" value="drugcalculationquiz">
                         </form>
 						</p>
 					</div>
