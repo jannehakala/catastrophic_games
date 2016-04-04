@@ -6,9 +6,11 @@ include("drugdbinit.php");
 
 ?>
             <div id="right">
-                <div id="content" style ="wdith:100px">
+                <div id="content">
                     <h2>Your stats</h2>                    
                        <?php get_stats($_SESSION['login_user'], 1);
+					   
+							echo get_list();
 							tee_graafi();
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 					   ?>      
