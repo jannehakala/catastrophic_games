@@ -1,0 +1,106 @@
+@font-face {
+font-family: 'Myriad Pro Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Myriad Pro Regular'), url('MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+* {
+    font-family: 'Myriad Pro Regular';
+    font-weight: normal;
+}
+
+#main {
+    width:960px;
+    margin:50px auto;
+    /*font-family:serif;*/
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Myriad Pro Regular';
+    font-weight: normal;
+    font-size: 42px
+}
+
+h2 {
+    text-align:center;
+    border-radius:10px 10px 0 0;
+    font-size: 30px;
+    /*background-color:#FEFFED;
+    margin:-10px -40px;
+    padding:15px;*/
+}
+
+hr {
+    border:0;
+    border-bottom:1px solid #ccc;
+    margin:10px -40px;
+    margin-bottom:30px;
+}
+
+#login, #register {
+    width:300px;
+    border-radius:10px;
+    font-family:raleway;
+    border:2px solid #ccc;
+    padding: 0 40px 25px 40px;
+    margin: 50px auto 0px auto;
+}
+
+input[type=text],input[type=password] {
+    width:95%;
+    padding:10px;
+    border:1px solid #ccc;
+    padding-left:5px;
+    font-size:16px;
+    margin-bottom: 10px;
+}
+
+input[type=submit] {
+    width:101%;
+    background-color: #4CAF50;
+    color:#fff;
+    border:2px solid #46A049;
+    padding:10px;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:5px;
+    margin: 5px 0 15px 0;
+}
+
+#register input[type=text], #register input[type=password] {
+    margin-bottom: 0px;
+}
+
+#profile {
+    padding:50px;
+    border:1px dashed gray;
+    font-size:20px;
+    background-color:#DCE6F7;
+}
+
+#logout {
+    float:right;
+    padding:5px;
+    border:dashed 1px gray;
+}
+
+a {
+    text-decoration:none;
+    color:#6495ed;
+}
+
+i {
+    color:#6495ed;
+}
+
+span {
+    color: #FF0000;
+}
+
+.error {
+    color: #FF0000;
+    display: inline-block;
+    margin-bottom: 10px;
+}
