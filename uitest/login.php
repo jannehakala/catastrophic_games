@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
         $password=$_POST['password'];
 
         if ($user->login($username, $password)) {
-            header("Location: /main.php");
+            header("Location: main.php");
             exit();
         }
         else {
