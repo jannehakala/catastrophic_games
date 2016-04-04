@@ -11,7 +11,7 @@ SQL;
 	$result = pg_query($db, $sql);	
 }
 function get_stats($username, $number){ 
-require_once("dbinit.php");
+include("dbinit.php");
 	echo "<table>\n"; 
 	echo '<thead>
 			<tr>
@@ -40,7 +40,7 @@ SQL;
                 break; 
         } 
 		}
-		elseif($number == 1){
+		if($number == 1){
 			if ($cnt == 0)  { 
         break; 
         } 	
