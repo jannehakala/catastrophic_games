@@ -10,11 +10,11 @@ include("drugdbinit.php");
                     <h2>Your stats</h2>                    
                        <?php get_stats($_SESSION['login_user'], 1);
 							tee_graafi();
-							 echo '<div id="curve_chart" style="width: 900px; height: 500px"></div>';
+							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 					   ?>      
 
 					</script>					   
-                </div>
+                </div >
             </div>
         </div>
     </div>
@@ -46,6 +46,6 @@ include("drugdbinit.php");
 
         chart.draw(data, options);
       }
-    </script>>';
+    </script>';
 }
   ?>
