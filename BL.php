@@ -31,8 +31,8 @@ SQL;
 	$apu = 0;
 	$apu2;
 	while(($arr = pg_fetch_array($stmt,$apu,PGSQL_ASSOC)) ) {
-	//$apu2 =	get_exercise($arr['Exercise_id']);
-    	echo "<tr><td>".$arr['Exercise_id']."</td><td>".$arr['points']."</td><td>".$arr['solve_date']."</td></tr>\n";
+	$apu2 =	get_exercise($arr['Exercise_id']);
+    	echo "<tr><td>".$apu2."</td><td>".$arr['points']."</td><td>".$arr['solve_date']."</td></tr>\n";
 		$apu++;	
 		if ($cnt == 0)  { 
                 break; 
@@ -42,20 +42,20 @@ SQL;
 	echo "</tbody></table>";
 }
 function get_exercise($arr){
-		$apu2 ="";
-		if($arr = 1){
-			$apu2 = "Drugcalculations";
+		$apu3 ="";
+		if($arr == 1){
+			$apu3 = "Drugcalculations";
 		}
-		if($arr = 2){
-			$apu2 = "Agents";
+		elseif($arr == 2){
+			$apu3 = "Agents";
 		}
-		if($arr = 3){
-			$apu2 = "Unit conversions";
+		elseif($arr == 3){
+			$apu3 = "Unit conversions";
 		}
 		else{
-			$apu2	= "unkown";
+			$apu3	= "unkown";
 		}
-		return $apu2;
+		return $apu3;
 }
 
 ?>
