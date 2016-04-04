@@ -9,7 +9,7 @@ include("drugdbinit.php");
                 <div id="content">
                     <h2>Your stats</h2>                    
                        <?php get_stats($_SESSION['login_user'], 1);
-							tee_graafi(13,12,14);
+							tee_graafi();
 							 echo '<div id="curve_chart" style="width: 900px; height: 500px"></div>';
 					   ?>      
 
@@ -20,11 +20,11 @@ include("drugdbinit.php");
     </div>
 </body>
 </html>
-<?php function tee_graafi($aanimaara0,$aanimaara1,$aanimaara2 )
+<?php function tee_graafi( )
 {
  echo  '   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load("current", {'packages':['corechart']});
+      google.charts.load("current", {"packages":["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
