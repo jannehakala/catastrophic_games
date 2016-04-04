@@ -9,9 +9,6 @@ include("drugdbinit.php");
                 <div id="content">
                     <h2>Your stats</h2>                    
                        <?php print_r(get_stats($_SESSION['login_user'], 1));
-					   
-						 
-
 							tee_graafi();
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 					   ?>      
@@ -32,11 +29,11 @@ include("drugdbinit.php");
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ["Year", "Sales", "Expenses"],
-          ["2004",  1000,      400],
-          ["2005",  1170,      460],
-          ["2006",  660,       1120],
-          ["2007",  1030,      540]
+          ["Year", "Agents", "Drugcalculations"],
+          ["2004",  6,      5],
+          ["2005",  5,      1],
+          ["2006",  0,       4],
+          ["2007",  1,      7]
         ]);
 
         var options = {
