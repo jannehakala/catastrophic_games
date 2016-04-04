@@ -6,7 +6,7 @@ include("drugdbinit.php");
 
 ?>
             <div id="right">
-                <div id="content">
+                <div id="content" style ="wdith:100px">
                     <h2>Your stats</h2>                    
                        <?php get_stats($_SESSION['login_user'], 1);
 							tee_graafi();
