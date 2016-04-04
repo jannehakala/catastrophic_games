@@ -29,7 +29,7 @@ SQL;
 	$cnt = pg_num_rows($stmt)-1;
 	$apu = 0;
 	while(($arr = pg_fetch_array($stmt,$apu,PGSQL_ASSOC)) ) {
-    	echo "<tr><td>admin</td><td>".$arr['points']."</td><td>".$arr['user_date']."</td></tr>\n";
+    	echo "<tr><td>admin</td><td>".$arr['points']."</td><td>".$arr['solve_date']."</td></tr>\n";
 		$apu++;	
 		if ($cnt == 0)  { 
                 break; 
