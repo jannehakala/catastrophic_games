@@ -52,6 +52,7 @@ $content = <<<CONTENT
 		</div>
 	</div>
 CONTENT;
-
 echo $content;
+get_stats($_SESSION['login_user'],0);
+echo "</div></div>";
 ?>
