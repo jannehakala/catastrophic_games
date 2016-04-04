@@ -2,7 +2,7 @@
 ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
 error_reporting(-1);
-
+$array = array();
 function set_stats($username, $exercise, $value){
 require_once("dbinit.php");
 	$sql = <<<SQL
@@ -31,16 +31,21 @@ SQL;
 	$cnt2 = pg_num_rows($stmt)-5;
 	$apu = pg_num_rows($stmt)-1;
 	$apu2;
+	
 	while(($arr = pg_fetch_array($stmt,$apu,PGSQL_ASSOC)) ) {
 	$apu2 =	get_exercise($arr['Exercise_id']);
     	echo "<tr><td>".$apu2."</td><td>".$arr['points']."</td><td>".$arr['solve_date']."</td></tr>\n";
 		$apu--;	
+		//STATISTICS PALKKI
 		if($number == 0){
 			if ($cnt == 0 || $cnt == $cnt2)  { 
                 break; 
         } 
 		}
+		//STATISTIC SIVU
 		if($number == 1){
+	
+			array_push($array,list( $apu2, $arr['points']));			
 			if ($cnt == 0)  { 
         break; 
         } 	
@@ -65,5 +70,7 @@ function get_exercise($arr){
 		}
 		return $apu3;
 }
-
+function get_list(){
+	return $array;
+}
 ?>
