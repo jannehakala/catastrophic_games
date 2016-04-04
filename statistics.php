@@ -1,7 +1,6 @@
 <?php
 
 include("header.php");
-include("drugdbinit.php");
 include("BL.php")
 
 ?>
