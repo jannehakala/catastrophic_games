@@ -1,6 +1,7 @@
 <?php
 
 include("header.php");
+include("drugdbinit.php");
 include("BL.php")
 
 ?>
@@ -8,7 +9,7 @@ include("BL.php")
                 <div id="content">
                     <h2>Your stats</h2>
                     <p>
-                        <?php echo get_stats($_SESSION['login_user'],1);?>
+                        <?php //echo get_stats($_SESSION['login_user'],1);?>
                     </p>
                 </div>
             </div>
