@@ -29,11 +29,18 @@ include("drugdbinit.php");
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ["Year", "Agents", "Drugcalculations"],
-          ["2004",  6,      5],
-          ["2005",  5,      1],
-          ["2006",  0,       4],
-          ["2007",  1,      7]
+          ["number", "Agents", "Drugcalculations", "Unit conversions"],
+          ["1",  6,      5,	10],
+          ["2",  5,      1, 6],
+          ["3",  0,       4, 4],
+          ["4",  1,      7, 6],
+		  ["5",  5,       4, 9],
+		  ["6",  8,       4, 0],
+		  ["7",  0,       4, 2],
+		  ["8",  0,       4, 4],
+		  ["9",  0,       4, 7],
+		  ["10",  0,       4, 10]
+		  
         ]);
 
         var options = {
