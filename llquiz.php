@@ -1,6 +1,10 @@
 
 <?php
 include ("header.php");
+if (!isset($_SESSION['question'])) $_SESSION['question'] = 0;
+else $_SESSION['question'] = 0;
+if (!isset($_SESSION['score'])) $_SESSION['score'] = 0;
+else $_SESSION['score'] = 0;
 ?>
             <div id="right">
                 <div id="content">

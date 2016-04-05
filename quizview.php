@@ -14,7 +14,7 @@ session_start();
 <body>
     <div id="wrapper">
         <div id="header">
-            <h1>Welcome,<?php echo $_SESSION['login_user'] ?>!</h1>
+            <h1>Welcome, <?php echo $_SESSION['login_user'] ?>!</h1>
             <div class="dropdown">
             <button class="dropbtn"><?php echo $_SESSION['login_user'] ?></button>
                 <div class="dropdown-content">
@@ -33,6 +33,9 @@ session_start();
                     if (!isset($_SESSION['quiztype'])) $_SESSION['quiztype'] = 'drugidentificationquiz';
                     include ("quiz.php");
                 ?>
+                <form action="/" style="margin-top:200px;">
+                    <input type="submit" onclick="return confirm('Are you sure you want to quit?')" value="Quit">
+                </form>
             </div>
         </div>
     </div>
