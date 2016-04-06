@@ -48,6 +48,6 @@ $content = <<<CONTENT
 CONTENT;
 // <h2><a href =statistics.php>Statistics</a></h2>
 echo $content;
-get_stats($_SESSION['login_user'],0);
+// get_stats($_SESSION['login_user'],0);
 echo "</div></div>";
 ?>
