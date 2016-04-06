@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+// session_start();
 $_SESSION['error'] = '';
 require_once("dbinit.php");
 require_once("User.class.php");

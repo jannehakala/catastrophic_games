@@ -96,7 +96,7 @@ class DCQuestion1 {
     private $templates = array(
         "Amoriinia käytetaan mm. virtsatietulehduksen hoitoon. Sitä on olemassa oraalinesteenä, jonka vahvuus<br>
         on 50mg/ml. Lasten vaikeisiin infektioihin tätä tulee antaa 40mg/kg/vrk jaettuna kolmeen (3) antokertaan.<br>
-        Laske kerta-annos %d kg painavalle lapselle.",
+        Laske kerta-annos millilitroina %d kg painavalle lapselle.",
         "Lapselle on määrätty vaikean infektion hoitoon kefakloria per os 40 mg painokiloa kohti vuorokaudessa,<br>
         jaettuna kolmeen annokseen. Kefaklori- oraalinesteen vahvuus on 50 mg / ml. Montako millilitraa on kerta-annos,<br>
         kun lapsi painaa %d kg?"
@@ -247,7 +247,7 @@ class DCQuestion3 {
         printf_array($this->template, $this->data);
         echo "<form method=POST>";
         foreach ($this->choices as $choice) {
-            echo "<input type=radio name=ans value={$choice}>{$choice} ml<br>";
+            echo "<input type=radio name=ans value={$choice}>{$choice} mg<br>";
         }
         // echo "<input type=number name=ans><br>";
         echo "<input type=submit name=next value=Seuraava>";

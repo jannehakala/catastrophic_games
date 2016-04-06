@@ -9,7 +9,7 @@ if (!isset($_SESSION['login_user'])) {
     exit();
 }
 
-include ("BL.php");
+// include ("BL.php");
 
 $content = <<<CONTENT
 <!DOCTYPE html>
@@ -44,8 +44,9 @@ $content = <<<CONTENT
                     </ul>
                 </div>
                 <div id="left-2">
-                    <h2><a href =statistics.php>Statistics</a></h2>
+                    
 CONTENT;
+// <h2><a href =statistics.php>Statistics</a></h2>
 echo $content;
 get_stats($_SESSION['login_user'],0);
 echo "</div></div>";
