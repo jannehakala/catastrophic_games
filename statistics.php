@@ -78,7 +78,7 @@ include ("BL.php");
 								}
 							}*/
 						
-							tee_graafi($drugcal, $agents, $unitcon);
+							tee_graafi($drugcal);
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 					   ?>      
 
@@ -89,7 +89,7 @@ include ("BL.php");
     </div>
 </body>
 </html>
-<?php function tee_graafi($drugcal, $agents, $unitcon)
+<?php function tee_graafi($drugcal)
 {
  echo  '   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -104,7 +104,7 @@ include ("BL.php");
           ["3",  0,        '.$drugcal[2].', 0],
           ["4",  0,     '.$drugcal[3].' , 0],
 		  ["5",  0,      '.$drugcal[4].', 0],
-		  ["6",0,      '.$drugcal[5].', 0],
+		  ["6",  0,      '.$drugcal[5].', 0],
 		  ["7",  0,      '.$drugcal[6].', 0],
 		  ["8",  0,      '.$drugcal[7].', 0],
 		  ["9", 0,      '.$drugcal[8].', 0],
