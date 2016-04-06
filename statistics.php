@@ -11,17 +11,18 @@ error_reporting(-1);
                 <div id="content">
                     <h2>Your stats</h2>                    
                        <?php 
-					    print_r(get_stats($_SESSION['login_user'], 1));
+					   / print_r(get_stats($_SESSION['login_user'], 1));
 					   	$drugcal = array();
 						$unitcon = array();
 						$agents = array();
 						
 					 
 				      $stats = get_stats($_SESSION['login_user'], 1)
+					  print_r($stats);
 							tee_graafi();
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 							$laskuapu = 0;
-							foreach($stats as $rivi => $arvo){
+						/*						foreach($stats as $rivi => $arvo){
 								echo $apu."---------------------<br>";
 								foreach($arvo as $avain => $apu2){
 									if($avain == 0){
@@ -51,7 +52,7 @@ $												echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2;
 										}		
 									}
 							}
-							}
+							}*/
 							echo "drugcalc------------<br>";
 						//	print_r($drugcal);
 								echo "drugcalc------------<br>";
