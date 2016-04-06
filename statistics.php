@@ -51,7 +51,7 @@ error_reporting(-1);
 							}
 							}
 							
-							$result1 = count($drugcal);
+						/*	$result1 = count($drugcal);
 							if($result1 > 10){
 								$result1 = 10;
 							}
@@ -71,7 +71,7 @@ error_reporting(-1);
 							}
 							for($i = 0; $i < $result3 $i++){
 								
-							}
+							}*/
 							/*foreach($aarray as $apu => $arvo){
 								echo $apu." apu-----<br>";
 								foreach($arvo as $avain => $ap2){
