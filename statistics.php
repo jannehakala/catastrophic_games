@@ -12,9 +12,9 @@ error_reporting(-1);
                     <h2>Your stats</h2>                    
                        <?php 
 					 
-				//	   	$drugcal = array();
-					//	$unitcon = array();
-					//	$agents = array();
+					   	$drugcal = array();
+						$unitcon = array();
+						$agents = array();
 						
 	
 							$stats =  get_stats($_SESSION['login_user'], 1);
@@ -40,26 +40,23 @@ error_reporting(-1);
 									}
 									if($avain == 1){
 										if($laskuapu == 1){		
-												echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2."<br>";									
-											//7array_push($drugcal, $apu2);
+											array_push($drugcal, $apu2);
 										}
 										if($laskuapu == 2){
-										//	array_push($agents, $apu2);
-										echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2."<br>";
+											array_push($agents, $apu2);
 										}
 										if($laskuapu == 3){
-										//	array_push($unitcon, $apu2);
-										echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2."<br>";
+											array_push($unitcon, $apu2);
 										}		
 									}
 							}
 							}
 							echo "drugcalc------------<br>";
-						//	print_r($drugcal);
+							print_r($drugcal);
 								echo "drugcalc------------<br>";
-							//print_r($agents);
+							print_r($agents);
 								echo "unitcon------------<br>";
-							//print_r($unitcon);
+							print_r($unitcon);
 							/*						foreach($aarray as $apu => $arvo){
 								echo $apu." apu-----<br>";
 								foreach($arvo as $avain => $ap2){
