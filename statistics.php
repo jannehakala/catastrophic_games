@@ -17,9 +17,7 @@ error_reporting(-1);
 					//	$agents = array();
 						
 	
-				   $stats =  get_stats($_SESSION['login_user'], 1);
-				   print_r($stats);
-					
+							$stats =  get_stats($_SESSION['login_user'], 1);
 							tee_graafi();
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 							$laskuapu = 0;
@@ -28,14 +26,13 @@ error_reporting(-1);
 								foreach($arvo as $avain => $apu2){
 									if($avain == 0){
 										if($apu2 == "Drugcalculations"){
-											$laskuapu == 1;
-										
+											$laskuapu = 1;
 										}
 										if($apu2 == "Agents"){
-											$laskuapu == 2;
+											$laskuapu = 2;
 										}
 										if($apu2 == "Unit conversions"){
-											$laskuapu == 3;
+											$laskuapu = 3;
 										}									
 									}
 									if($avain == 1){
