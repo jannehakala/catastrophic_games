@@ -27,15 +27,18 @@ error_reporting(-1);
 									if($avain == 0){
 										if($apu2 == "Drugcalculations"){
 											$laskuapu = 1;
+											echo $laskuapu;
 										}
 										if($apu2 == "Agents"){
 											$laskuapu = 2;
+												echo $laskuapu;
 										}
 										if($apu2 == "Unit conversions"){
 											$laskuapu = 3;
+												echo $laskuapu;
 										}									
 									}
-									if($avain == 1){
+									/*if($avain == 1){
 										if($laskuapu == 1){		
 $												echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2;									
 											//7array_push($drugcal, $apu2);
@@ -48,7 +51,7 @@ $												echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2;
 										//	array_push($unitcon, $apu2);
 										echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2;
 										}		
-									}
+									}*/
 							}
 							}
 							echo "drugcalc------------<br>";
