@@ -111,15 +111,15 @@ include ("BL.php");
         var data = google.visualization.arrayToDataTable([
           ["number", "Agents", "Drug calculations", "Unit conversions"],
           ["1",  '.$agents[0].',      '.$drugcal[0].',	'.$unitcon[0].'],
-          ["2",  '.$agents[0].',      '.$drugcal[1].', '.$unitcon[0].'],
-          ["3",  '.$agents[0].',        '.$drugcal[2].', '.$unitcon[0].'],
-          ["4",  '.$agents[0].',     '.$drugcal[0].' , '.$unitcon[0].'],
-		  ["5",  '.$agents[0].',      '.$drugcal[0].', '.$unitcon[0].'],
-		  ["6",  '.$agents[0].',      '.$drugcal[0].', '.$unitcon[0].'],
-		  ["7",  '.$agents[0].',      '.$drugcal[0].', '.$unitcon[0].'],
-		  ["8",  '.$agents[0].',      '.$drugcal[0].', '.$unitcon[0].'],
-		  ["9",  '.$agents[0].',      '.$drugcal[0].', '.$unitcon[0].'],
-		  ["10",  '.$agents[0].',     '.$drugcal[0].', '.$unitcon[0].']
+          ["2",  '.$agents[1].',      '.$drugcal[1].', '.$unitcon[1].'],
+          ["3",  '.$agents[2].',        '.$drugcal[2].', '.$unitcon[2].'],
+          ["4",  '.$agents[3].',     '.$drugcal[3].' , '.$unitcon[3].'],
+		  ["5",  '.$agents[4].',      '.$drugcal[4].', '.$unitcon[4].'],
+		  ["6",  '.$agents[5].',      '.$drugcal[5].', '.$unitcon[5].'],
+		  ["7",  '.$agents[6].',      '.$drugcal[6].', '.$unitcon[6].'],
+		  ["8",  '.$agents[7].',      '.$drugcal[7].', '.$unitcon[7].'],
+		  ["9",  '.$agents[8].',      '.$drugcal[8].', '.$unitcon[8].'],
+		  ["10",  '.$agents[9].',     '.$drugcal[9].', '.$unitcon[9].']
 		  
         ]);
 
