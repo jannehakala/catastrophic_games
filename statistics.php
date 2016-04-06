@@ -18,8 +18,8 @@ error_reporting(-1);
 						
 	
 							$stats =  get_stats($_SESSION['login_user'], 1);
-							tee_graafi();
-							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
+							
+							
 							$laskuapu = 0;
 							foreach($stats as $rivi => $arvo){
 								foreach($arvo as $avain => $apu2){
@@ -79,7 +79,8 @@ error_reporting(-1);
 									echo $ap2." ap2<br>";
 							}
 							}*/
-					
+					tee_graafi();
+					echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 					   ?>      
 
 					</script>					   
