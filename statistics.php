@@ -55,7 +55,7 @@ error_reporting(-1);
 						echo "unitcon";
 						print_r($unitcon);
 						echo "<br>";
-						/*	$result1 = count($drugcal);
+							$result1 = count($drugcal);
 							if($result1 > 10){
 								$result1 = 10;
 							}
@@ -67,7 +67,7 @@ error_reporting(-1);
 							if($result3 > 10){
 								$resul3 = 10;
 							}
-							for($i = 0; $i < $result1 $i++){
+						/*	for($i = 0; $i < $result1 $i++){
 								
 							}
 							for($i = 0; $i < $result2 $i++){
@@ -75,7 +75,7 @@ error_reporting(-1);
 							}
 							for($i = 0; $i < $result3 $i++){
 								
-							}*/
+							}
 							/*foreach($aarray as $apu => $arvo){
 								echo $apu." apu-----<br>";
 								foreach($arvo as $avain => $ap2){
