@@ -8,7 +8,8 @@ include("drugdbinit.php");
             <div id="right">
                 <div id="content">
                     <h2>Your stats</h2>                    
-                       <?php print_r(get_stats($_SESSION['login_user'], 1));
+                       <?php 
+					    //print_r(get_stats($_SESSION['login_user'], 1));
 					   	$drugcal = array();
 						$unitcon = array();
 						$agents = array();
@@ -33,16 +34,17 @@ include("drugdbinit.php");
 										}									
 									}
 									if($avain == 1){
-										if($laskuapu == 1;){											
+										if($laskuapu == 1){											
 											array_push($drugcal, $apu2);
 										}
-										if($laskuapu == 2;){
+										if($laskuapu == 2){
 											array_push($agents, $apu2);
 										}
-										if($laskuapu == 3;){
+										if($laskuapu == 3){
 											array_push($unitcon, $apu2);
 										}		
 									}
+							}
 							}
 							echo "drugcalc------------<br>";
 							print_r($drugcal);
