@@ -51,30 +51,30 @@ include ("BL.php");
 							if($result1 > 10){
 								$result1 = 10;
 							}
-							if($resul1 < 11){
+							if($result1 < 11){
 								while($result1 != 10){
 								array_push($drugcal, '0');
-								resul1 = count($drugcal);
+								result1 = count($drugcal);
 								}
 							}
 							$result2 = count($agents);
 							if($result2 > 10){
-								$resul2 = 10;
+								$result2 = 10;
 							}
-							if($resul2 < 11){
+							if($result2 < 11){
 								while($result2 != 10){
 								array_push($agents, '0');
-								resul2 = count($agents);
+								result2 = count($agents);
 								}
 							}
 						    $result3 = count($unitcon);
 							if($result3 > 10){
-								$resul3 = 10;
+								$result3 = 10;
 							}
-							if($resul13< 11){
+							if($result13< 11){
 								while($result3 != 10){
 								array_push($unitcon, '0');
-								resul3 = count($unitcon);
+								result3 = count($unitcon);
 								}
 							}
 						
