@@ -46,22 +46,14 @@ include ("BL.php");
 									}
 							}
 							}
-							echo "DRUG";
-						print_r($drugcal);
-						echo "<br>";
-						echo "agents";
-						print_r($agents);
-						echo "<br>";
-						echo "unitcon";
-						print_r($unitcon);
-						echo "<br>";
+					
 							$result1 = count($drugcal);
 							if($result1 > 10){
 								$result1 = 10;
 							}
 							if($resul1 < 11){
 								while($result1 != 10){
-								array_push($drugcal, 0);
+								array_push($drugcal, '0');
 								resul1 = count($drugcal);
 								}
 							}
@@ -71,7 +63,7 @@ include ("BL.php");
 							}
 							if($resul2 < 11){
 								while($result2 != 10){
-								array_push($agents, 0);
+								array_push($agents, '0');
 								resul2 = count($agents);
 								}
 							}
@@ -81,7 +73,7 @@ include ("BL.php");
 							}
 							if($resul13< 11){
 								while($result3 != 10){
-								array_push($unitcon, 0);
+								array_push($unitcon, '0');
 								resul3 = count($unitcon);
 								}
 							}
