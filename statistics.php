@@ -57,7 +57,7 @@ include ("BL.php");
 								result1 = count($drugcal);
 								}
 							}
-							$result2 = count($agents);
+							/*$result2 = count($agents);
 							if($result2 > 10){
 								$result2 = 10;
 							}
@@ -76,7 +76,7 @@ include ("BL.php");
 								array_push($unitcon, '0');
 								result3 = count($unitcon);
 								}
-							}
+							}*/
 						
 							tee_graafi($drugcal, $agents, $unitcon);
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
@@ -99,16 +99,16 @@ include ("BL.php");
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ["number", "Agents", "Drug calculations", "Unit conversions"],
-          ["1",  '.$agents[0].',      '.$drugcal[0].',	'.$unitcon[0].'],
-          ["2",  '.$agents[1].',      '.$drugcal[1].', '.$unitcon[1].'],
-          ["3",  '.$agents[2].',        '.$drugcal[2].', '.$unitcon[2].'],
-          ["4",  '.$agents[3].',     '.$drugcal[3].' , '.$unitcon[3].'],
-		  ["5",  '.$agents[4].',      '.$drugcal[4].', '.$unitcon[4].'],
-		  ["6",  '.$agents[5].',      '.$drugcal[5].', '.$unitcon[5].'],
-		  ["7",  '.$agents[6].',      '.$drugcal[6].', '.$unitcon[6].'],
-		  ["8",  '.$agents[7].',      '.$drugcal[7].', '.$unitcon[7].'],
-		  ["9",  '.$agents[8].',      '.$drugcal[8].', '.$unitcon[8].'],
-		  ["10",  '.$agents[9].',     '.$drugcal[9].', '.$unitcon[9].']
+          ["1",  0,      '.$drugcal[0].',	0],
+          ["2",  0,      '.$drugcal[1].', 0],
+          ["3",  0,        '.$drugcal[2].', 0],
+          ["4",  0,     '.$drugcal[3].' , 0],
+		  ["5",  0,      '.$drugcal[4].', 0],
+		  ["6",0,      '.$drugcal[5].', 0],
+		  ["7",  0,      '.$drugcal[6].', 0],
+		  ["8",  0,      '.$drugcal[7].', 0],
+		  ["9", 0,      '.$drugcal[8].', 0],
+		  ["10",0,     '.$drugcal[9].', 0]
 		  
         ]);
 
