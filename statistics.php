@@ -22,7 +22,7 @@ error_reporting(-1);
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 							$laskuapu = 0;
 							foreach($stats as $rivi => $arvo){
-								echo $rivi."---------------------<br>";
+								echo "<br>".$rivi."---------------------<br>";
 								foreach($arvo as $avain => $apu2){
 									if($avain == 0){
 										if($apu2 == "Drugcalculations"){
@@ -38,7 +38,7 @@ error_reporting(-1);
 												echo $laskuapu;
 										}									
 									}
-									/*if($avain == 1){
+									if($avain == 1){
 										if($laskuapu == 1){		
 $												echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2;									
 											//7array_push($drugcal, $apu2);
@@ -51,7 +51,7 @@ $												echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2;
 										//	array_push($unitcon, $apu2);
 										echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2;
 										}		
-									}*/
+									}
 							}
 							}
 							echo "drugcalc------------<br>";
