@@ -99,16 +99,16 @@ include ("BL.php");
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ["number", "Agents", "Drug calculations", "Unit conversions"],
-          ["1",  0,      '.$drugcal[0].',	0],
-          ["2",  0,      '.$drugcal[1].', 0],
-          ["3",  0,        '.$drugcal[2].', 0],
-          ["4",  0,     '.$drugcal[3].' , 0],
-		  ["5",  0,      '.$drugcal[4].', 0],
-		  ["6",  0,      '.$drugcal[5].', 0],
-		  ["7",  0,      '.$drugcal[6].', 0],
-		  ["8",  0,      '.$drugcal[7].', 0],
-		  ["9", 0,      '.$drugcal[8].', 0],
-		  ["10",0,     '.$drugcal[9].', 0]
+          ["1",  0,      0,	0],
+          ["2",  0,     0, 0],
+          ["3",  0,     0, 0],
+          ["4",  0,     0 , 0],
+		  ["5",  0,     0, 0],
+		  ["6",  0,     0, 0],
+		  ["7",  0,      0, 0],
+		  ["8",  0,      0, 0],
+		  ["9", 0,     0, 0],
+		  ["10",0,     0, 0]
 		  
         ]);
 
