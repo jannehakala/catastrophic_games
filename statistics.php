@@ -47,14 +47,14 @@ include ("BL.php");
 							}
 							}
 					
-							$result1 = array_count_values($drugcal);
+							$result1 = count($drugcal);
 							if($result1 > 10){
 								$result1 = 10;
 							}
 							if($result1 < 11){
 								while($result1 != 10){
 								array_push($drugcal, 0);
-								result1 = array_count_values($drugcal);
+								result1 = count($drugcal);
 								}
 							}
 							/*$result2 = count($agents);
