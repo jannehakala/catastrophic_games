@@ -46,15 +46,6 @@ include ("BL.php");
 									}
 							}
 							}
-							echo "DRUG";
-						print_r($drugcal);
-						echo "<br>";
-						echo "agents";
-						print_r($agents);
-						echo "<br>";
-						echo "unitcon";
-						print_r($unitcon);
-						echo "<br>";
 						
 							$result1 = count($drugcal);
 							if($result1 > 10){
