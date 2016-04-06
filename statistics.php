@@ -16,7 +16,7 @@ error_reporting(-1);
 						$unitcon = array();
 						$agents = array();
 						
-					 $stats = array();
+					// $stats = array();
 				      $stats = get_stats($_SESSION['login_user'], 1)
 					  print_r($stats);
 							tee_graafi();
