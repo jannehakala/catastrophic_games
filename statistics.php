@@ -107,13 +107,13 @@ include ("BL.php");
           ["1",  '.$agents[0].',      '.$drugcal[0].',	'.$unitcon[0].'],
           ["2",  '.$agents[0].',      '.$drugcal[1].', '.$unitcon[0].'],
           ["3",  '.$agents[0].',        '.$drugcal[2].', '.$unitcon[0].'],
-          ["4",  '.$agents[0].',     '.$drugcal[3].' , '.$unitcon[0].'],
-		  ["5",  '.$agents[0].',      '.$drugcal[4].', '.$unitcon[0].'],
-		  ["6",  '.$agents[0].',      '.$drugcal[5].', '.$unitcon[0].'],
-		  ["7",  '.$agents[0].',      '.$drugcal[6].', '.$unitcon[0].'],
-		  ["8",  '.$agents[0].',      '.$drugcal[7].', '.$unitcon[0].'],
-		  ["9",  '.$agents[0].',      '.$drugcal[8].', '.$unitcon[0].'],
-		  ["10",  '.$agents[0].',     '.$drugcal[9].', '.$unitcon[0].']
+          ["4",  '.$agents[0].',     '.$drugcal[0].' , '.$unitcon[0].'],
+		  ["5",  '.$agents[0].',      '.$drugcal[0].', '.$unitcon[0].'],
+		  ["6",  '.$agents[0].',      '.$drugcal[0].', '.$unitcon[0].'],
+		  ["7",  '.$agents[0].',      '.$drugcal[0].', '.$unitcon[0].'],
+		  ["8",  '.$agents[0].',      '.$drugcal[0].', '.$unitcon[0].'],
+		  ["9",  '.$agents[0].',      '.$drugcal[0].', '.$unitcon[0].'],
+		  ["10",  '.$agents[0].',     '.$drugcal[0].', '.$unitcon[0].']
 		  
         ]);
 
