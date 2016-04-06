@@ -9,8 +9,55 @@ include("drugdbinit.php");
                 <div id="content">
                     <h2>Your stats</h2>                    
                        <?php print_r(get_stats($_SESSION['login_user'], 1));
+					   	$drugcal = array();
+						$unitcon = array();
+						$agents = array();
+						
+					   $stats = array();
+				       $stats = get_stats($_SESSION['login_user'], 1)
 							tee_graafi();
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
+							$laskuapu = 0;
+							foreach($stats as $rivi => $arvo){
+								echo $apu."---------------------<br>";
+								foreach($arvo as $avain => $apu2){
+									if($avain == 0){
+										if($apu2 == "Drugcalculations"){
+											$laskuapu == 1;
+										}
+										if($apu2 == "Agents"){
+											$laskuapu == 2;
+										}
+										if($apu2 == "Unit conversions"){
+											$laskuapu == 3;
+										}									
+									}
+									if($avain == 1){
+										if($laskuapu == 1;){											
+											array_push($drugcal, $apu2);
+										}
+										if($laskuapu == 2;){
+											array_push($agents, $apu2);
+										}
+										if($laskuapu == 3;){
+											array_push($unitcon, $apu2);
+										}		
+									}
+							}
+							echo "drugcalc------------<br>";
+							print_r($drugcal);
+								echo "drugcalc------------<br>";
+							print_r($agents);
+								echo "unitcon------------<br>";
+							print_r($unitcon);
+							/*						foreach($aarray as $apu => $arvo){
+								echo $apu." apu-----<br>";
+								foreach($arvo as $avain => $ap2){
+									echo $avain." avain<br>";
+									echo $ap2." ap2<br>";
+							}
+							}*/
+					
 					   ?>      
 
 					</script>					   
