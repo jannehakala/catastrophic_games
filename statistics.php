@@ -61,7 +61,7 @@ include ("BL.php");
 								$result1 = 10;
 							}
 							if(result1 < 11){
-							 while(result1 != 10){
+							 while(result1 != 11){
 								array_push($drugcal, 0);
 								$result1 = count($drugcal);
 							 }
