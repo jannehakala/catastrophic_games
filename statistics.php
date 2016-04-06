@@ -24,7 +24,6 @@ error_reporting(-1);
 							foreach($stats as $rivi => $arvo){
 								echo "<br>".$rivi."---------------------<br>";
 								foreach($arvo as $avain => $apu2){
-									echo "TÄMÄ ON AVAIN:".$avain;
 									if($avain == 0){
 										if($apu2 == "Drugcalculations"){
 											$laskuapu = 1;
@@ -41,16 +40,16 @@ error_reporting(-1);
 									}
 									if($avain == 1){
 										if($laskuapu == 1){		
-												echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2;									
+												echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2."<br>";									
 											//7array_push($drugcal, $apu2);
 										}
 										if($laskuapu == 2){
 										//	array_push($agents, $apu2);
-										echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2;
+										echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2."<br>";
 										}
 										if($laskuapu == 3){
 										//	array_push($unitcon, $apu2);
-										echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2;
+										echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2."<br>";
 										}		
 									}
 							}
