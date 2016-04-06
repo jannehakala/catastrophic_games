@@ -55,10 +55,16 @@ include ("BL.php");
 						echo "unitcon";
 						print_r($unitcon);
 						echo "<br>";
-						/*	$result1 = count($drugcal);
+						
+							$result1 = count($drugcal);
 							if($result1 > 10){
 								$result1 = 10;
 							}
+							//if(result1 < 11){
+							
+						//	}
+							
+							/*
 							$result2 = count($agents);
 							if($result2 > 10){
 								$resul2 = 10;
@@ -67,22 +73,7 @@ include ("BL.php");
 							if($result3 > 10){
 								$resul3 = 10;
 							}
-						/*	for($i = 0; $i < $result1 $i++){
-								
-							}
-							for($i = 0; $i < $result2 $i++){
-								
-							}
-							for($i = 0; $i < $result3 $i++){
-								
-							}
-							/*foreach($aarray as $apu => $arvo){
-								echo $apu." apu-----<br>";
-								foreach($arvo as $avain => $ap2){
-									echo $avain." avain<br>";
-									echo $ap2." ap2<br>";
-							}
-							}*/
+					*/
 							tee_graafi($drugcal, $agents, $unitcon);
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 					   ?>      
