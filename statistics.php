@@ -55,35 +55,38 @@ include ("BL.php");
 						echo "unitcon";
 						print_r($unitcon);
 						echo "<br>";
-						/*	$result1 = count($drugcal);
+							$result1 = count($drugcal);
 							if($result1 > 10){
 								$result1 = 10;
+							}
+							if($resul1 < 11){
+								while($result1 != 10){
+								array_push($drugcal, 0);
+								resul1 = count($drugcal);
+								}
 							}
 							$result2 = count($agents);
 							if($result2 > 10){
 								$resul2 = 10;
 							}
+							if($resul2 < 11){
+								while($result2 != 10){
+								array_push($agents, 0);
+								resul2 = count($agents);
+								}
+							}
 						    $result3 = count($unitcon);
 							if($result3 > 10){
 								$resul3 = 10;
 							}
-						/*	for($i = 0; $i < $result1 $i++){
-								
+							if($resul13< 11){
+								while($result3 != 10){
+								array_push($unitcon, 0);
+								resul3 = count($unitcon);
+								}
 							}
-							for($i = 0; $i < $result2 $i++){
-								
-							}
-							for($i = 0; $i < $result3 $i++){
-								
-							}
-							/*foreach($aarray as $apu => $arvo){
-								echo $apu." apu-----<br>";
-								foreach($arvo as $avain => $ap2){
-									echo $avain." avain<br>";
-									echo $ap2." ap2<br>";
-							}
-							}*/
-							tee_graafi($drugcal);
+						
+							tee_graafi($drugcal, $agents, $unitcon);
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 					   ?>      
 
@@ -94,7 +97,7 @@ include ("BL.php");
     </div>
 </body>
 </html>
-<?php function tee_graafi($drugcal)
+<?php function tee_graafi($drugcal, $agents, $unitcon)
 {
  echo  '   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -104,16 +107,16 @@ include ("BL.php");
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ["number", "Agents", "Drug calculations", "Unit conversions"],
-          ["1",  0,      '.$drugcal[0].',	0],
-          ["2",  0,      '.$drugcal[1].', 0],
-          ["3",  0,        '.$drugcal[2].', 0],
-          ["4",  0,      7, 0],
-		  ["5",  0,       4, 0],
-		  ["6",  0,       4, 0],
-		  ["7",  0,       4, 0],
-		  ["8",  0,       4, 0],
-		  ["9",  0,       4, 0],
-		  ["10",  0,       4, 10]
+          ["1",  '.$agents[0].',      '.$drugcal[0].',	'.$unitcon[0].'],
+          ["2",  '.$agents[1].',      '.$drugcal[1].', '.$unitcon[1].'],
+          ["3",  '.$agents[2].',        '.$drugcal[2].', '.$unitcon[2].'],
+          ["4",  '.$agents[3].',     '.$drugcal[3].' , '.$unitcon[3].'],
+		  ["5",  '.$agents[4].',      '.$drugcal[4].', '.$unitcon[4].'],
+		  ["6",  '.$agents[5].',      '.$drugcal[5].', '.$unitcon[5].'],
+		  ["7",  '.$agents[6].',      '.$drugcal[6].', '.$unitcon[6].'],
+		  ["8",  '.$agents[7].',      '.$drugcal[7].', '.$unitcon[7].'],
+		  ["9",  '.$agents[8].',      '.$drugcal[8].', '.$unitcon[8].'],
+		  ["10",  '.$agents[9].',     '.$drugcal[9].', '.$unitcon[9].']
 		  
         ]);
 
