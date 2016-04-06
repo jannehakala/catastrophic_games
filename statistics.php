@@ -100,7 +100,7 @@ error_reporting(-1);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ["number", "Agents", "Drug calculations", "Unit conversions"],
-          ["1",  '.$agents[1].',      5,	10],
+          ["1",  '.$drugcal[1].',      5,	10],
           ["2",  5,      1, 6],
           ["3",  0,       4, 4],
           ["4",  1,      7, 6],
