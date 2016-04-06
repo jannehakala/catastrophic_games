@@ -46,39 +46,44 @@ include ("BL.php");
 									}
 							}
 							}
-					
-							$result1 = count($drugcal);
+							echo "DRUG";
+						print_r($drugcal);
+						echo "<br>";
+						echo "agents";
+						print_r($agents);
+						echo "<br>";
+						echo "unitcon";
+						print_r($unitcon);
+						echo "<br>";
+						/*	$result1 = count($drugcal);
 							if($result1 > 10){
 								$result1 = 10;
 							}
-							if($result1 < 11){
-								while($result1 != 10){
-								array_push($drugcal, 0);
-								result1 = count($drugcal);
-								}
-							}
-							/*$result2 = count($agents);
+							$result2 = count($agents);
 							if($result2 > 10){
-								$result2 = 10;
-							}
-							if($result2 < 11){
-								while($result2 != 10){
-								array_push($agents, '0');
-								result2 = count($agents);
-								}
+								$resul2 = 10;
 							}
 						    $result3 = count($unitcon);
 							if($result3 > 10){
-								$result3 = 10;
+								$resul3 = 10;
 							}
-							if($result13< 11){
-								while($result3 != 10){
-								array_push($unitcon, '0');
-								result3 = count($unitcon);
-								}
+						/*	for($i = 0; $i < $result1 $i++){
+								
+							}
+							for($i = 0; $i < $result2 $i++){
+								
+							}
+							for($i = 0; $i < $result3 $i++){
+								
+							}
+							/*foreach($aarray as $apu => $arvo){
+								echo $apu." apu-----<br>";
+								foreach($arvo as $avain => $ap2){
+									echo $avain." avain<br>";
+									echo $ap2." ap2<br>";
+							}
 							}*/
-						
-							tee_graafi($drugcal);
+							tee_graafi($drugcal, $agents, $unitcon);
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 					   ?>      
 
@@ -89,7 +94,7 @@ include ("BL.php");
     </div>
 </body>
 </html>
-<?php function tee_graafi($drugcal)
+<?php function tee_graafi($drugcal, $agents, $unitcon)
 {
  echo  '   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -99,16 +104,16 @@ include ("BL.php");
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ["number", "Agents", "Drug calculations", "Unit conversions"],
-          ["1",  0,      0,	0],
-          ["2",  0,     0, 0],
-          ["3",  0,     0, 0],
-          ["4",  0,     0 , 0],
-		  ["5",  0,     0, 0],
-		  ["6",  0,     0, 0],
-		  ["7",  0,      0, 0],
-		  ["8",  0,      0, 0],
-		  ["9", 0,     0, 0],
-		  ["10",0,     0, 0]
+          ["1",  '.$agents[0].',      '.$drugcal[0].',	'.$unitcon[0].'],
+          ["2",  '.$agents[0].',      '.$drugcal[1].', '.$unitcon[0].'],
+          ["3",  '.$agents[0].',        '.$drugcal[2].', '.$unitcon[0].'],
+          ["4",  '.$agents[0].',     '.$drugcal[3].' , '.$unitcon[0].'],
+		  ["5",  '.$agents[0].',      '.$drugcal[4].', '.$unitcon[0].'],
+		  ["6",  '.$agents[0].',      '.$drugcal[5].', '.$unitcon[0].'],
+		  ["7",  '.$agents[0].',      '.$drugcal[6].', '.$unitcon[0].'],
+		  ["8",  '.$agents[0].',      '.$drugcal[7].', '.$unitcon[0].'],
+		  ["9",  '.$agents[0].',      '.$drugcal[8].', '.$unitcon[0].'],
+		  ["10",  '.$agents[0].',     '.$drugcal[9].', '.$unitcon[0].']
 		  
         ]);
 
