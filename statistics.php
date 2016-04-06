@@ -11,12 +11,12 @@ error_reporting(-1);
                 <div id="content">
                     <h2>Your stats</h2>                    
                        <?php 
-					   / print_r(get_stats($_SESSION['login_user'], 1));
+					    print_r(get_stats($_SESSION['login_user'], 1));
 					   	$drugcal = array();
 						$unitcon = array();
 						$agents = array();
 						
-					 
+					 $stats = array();
 				      $stats = get_stats($_SESSION['login_user'], 1)
 					  print_r($stats);
 							tee_graafi();
