@@ -21,12 +21,13 @@ error_reporting(-1);
 							tee_graafi();
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 							$laskuapu = 0;
-						/*	foreach($stats as $rivi => $arvo){
+							foreach($stats as $rivi => $arvo){
 								echo $apu."---------------------<br>";
 								foreach($arvo as $avain => $apu2){
 									if($avain == 0){
 										if($apu2 == "Drugcalculations"){
 											$laskuapu == 1;
+										
 										}
 										if($apu2 == "Agents"){
 											$laskuapu == 2;
@@ -36,18 +37,21 @@ error_reporting(-1);
 										}									
 									}
 									if($avain == 1){
-										if($laskuapu == 1){											
-											array_push($drugcal, $apu2);
+										if($laskuapu == 1){		
+$												echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2;									
+											//7array_push($drugcal, $apu2);
 										}
 										if($laskuapu == 2){
-											array_push($agents, $apu2);
+										//	array_push($agents, $apu2);
+										echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2;
 										}
 										if($laskuapu == 3){
-											array_push($unitcon, $apu2);
+										//	array_push($unitcon, $apu2);
+										echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2;
 										}		
 									}
 							}
-							}*/
+							}
 							echo "drugcalc------------<br>";
 						//	print_r($drugcal);
 								echo "drugcalc------------<br>";
