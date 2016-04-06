@@ -17,7 +17,7 @@ error_reporting(-1);
 						$agents = array();
 						
 					   $stats = array();
-				       $stats = get_stats($_SESSION['login_user'], 1)
+				      // $stats = get_stats($_SESSION['login_user'], 1)
 							tee_graafi();
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 							$laskuapu = 0;
@@ -49,11 +49,11 @@ error_reporting(-1);
 							}
 							}*/
 							echo "drugcalc------------<br>";
-							print_r($drugcal);
+						//	print_r($drugcal);
 								echo "drugcalc------------<br>";
-							print_r($agents);
+							//print_r($agents);
 								echo "unitcon------------<br>";
-							print_r($unitcon);
+							//print_r($unitcon);
 							/*						foreach($aarray as $apu => $arvo){
 								echo $apu." apu-----<br>";
 								foreach($arvo as $avain => $ap2){
