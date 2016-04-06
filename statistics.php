@@ -24,6 +24,7 @@ error_reporting(-1);
 							foreach($stats as $rivi => $arvo){
 								echo "<br>".$rivi."---------------------<br>";
 								foreach($arvo as $avain => $apu2){
+									echo "TÄMÄ ON AVAIN:".$avain;
 									if($avain == 0){
 										if($apu2 == "Drugcalculations"){
 											$laskuapu = 1;
