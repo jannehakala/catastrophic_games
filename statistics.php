@@ -41,7 +41,7 @@ error_reporting(-1);
 									}
 									if($avain == 1){
 										if($laskuapu == 1){		
-$												echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2;									
+												echo "Laskuapu : ".$laskuapu."Vastaus:".$apu2;									
 											//7array_push($drugcal, $apu2);
 										}
 										if($laskuapu == 2){
