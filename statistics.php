@@ -66,17 +66,29 @@ include ("BL.php");
 								$result1 = count($drugcal);
 							 }
 							}
-							
-							/*
 							$result2 = count($agents);
 							if($result2 > 10){
-								$resul2 = 10;
+								$result2 = 10;
 							}
-						    $result3 = count($unitcon);
+							if($result2 < 11){
+							 while($result2 != 11){
+								array_push($agents, 0);
+								$result2 = count($agents);
+							 }
+							}
+							
+							$result3 = count($unitcon);
 							if($result3 > 10){
-								$resul3 = 10;
+								$result3 = 10;
 							}
-					*/
+							if($result3 < 11){
+							 while($result3 != 11){
+								array_push($unitcon, 0);
+								$result3 = count($unitcon);
+							 }
+							}
+							
+							
 							tee_graafi($drugcal, $agents, $unitcon);
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 					   ?>      
