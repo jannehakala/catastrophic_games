@@ -22,7 +22,6 @@ error_reporting(-1);
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 							$laskuapu = 0;
 							foreach($stats as $rivi => $arvo){
-								echo "<br>".$rivi."---------------------<br>";
 								foreach($arvo as $avain => $apu2){
 									if($avain == 0){
 										if($apu2 == "Drugcalculations"){
@@ -51,13 +50,29 @@ error_reporting(-1);
 									}
 							}
 							}
-							echo "drugcalc------------<br>";
-							print_r($drugcal);
-								echo "drugcalc------------<br>";
-							print_r($agents);
-								echo "unitcon------------<br>";
-							print_r($unitcon);
-							/*						foreach($aarray as $apu => $arvo){
+							
+							$result1 = count($drugcal);
+							if($result1 > 10){
+								$result1 = 10;
+							}
+							$result2 = count($agents);
+							if($result2 > 10){
+								$resul2 = 10;
+							}
+						    $result3 = count($unitcon);
+							if($result3 > 10){
+								$resul3 = 10;
+							}
+							for($i = 0; $i < $result1 $i++){
+								
+							}
+							for($i = 0; $i < $result2 $i++){
+								
+							}
+							for($i = 0; $i < $result3 $i++){
+								
+							}
+							/*foreach($aarray as $apu => $arvo){
 								echo $apu." apu-----<br>";
 								foreach($arvo as $avain => $ap2){
 									echo $avain." avain<br>";
@@ -84,7 +99,7 @@ error_reporting(-1);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ["number", "Agents", "Drug calculations", "Unit conversions"],
-          ["1",  6,      5,	10],
+          ["1",  '.$agents[1].',      5,	10],
           ["2",  5,      1, 6],
           ["3",  0,       4, 4],
           ["4",  1,      7, 6],
