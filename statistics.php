@@ -16,7 +16,7 @@ error_reporting(-1);
 						$unitcon = array();
 						$agents = array();
 						
-					   $stats = array();
+					 
 				      $stats = get_stats($_SESSION['login_user'], 1)
 							tee_graafi();
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
