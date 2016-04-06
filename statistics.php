@@ -5,7 +5,7 @@ include("drugdbinit.php");
 ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
 error_reporting(-1);
-
+include ("BL.php");
 ?>
             <div id="right">
                 <div id="content">
@@ -55,7 +55,7 @@ error_reporting(-1);
 						echo "unitcon";
 						print_r($unitcon);
 						echo "<br>";
-							$result1 = count($drugcal);
+						/*	$result1 = count($drugcal);
 							if($result1 > 10){
 								$result1 = 10;
 							}
@@ -104,15 +104,15 @@ error_reporting(-1);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ["number", "Agents", "Drug calculations", "Unit conversions"],
-          ["1",  2,      '.$drugcal[0].',	10],
-          ["2",  5,      '.$drugcal[1].', 6],
-          ["3",  0,       4, 4],
-          ["4",  1,      7, 6],
-		  ["5",  5,       4, 9],
-		  ["6",  8,       4, 0],
-		  ["7",  0,       4, 2],
-		  ["8",  0,       4, 4],
-		  ["9",  0,       4, 7],
+          ["1",  0,      '.$drugcal[0].',	0],
+          ["2",  0,      '.$drugcal[1].', 0],
+          ["3",  0,        '.$drugcal[2].', 0],
+          ["4",  0,      7, 0],
+		  ["5",  0,       4, 0],
+		  ["6",  0,       4, 0],
+		  ["7",  0,       4, 0],
+		  ["8",  0,       4, 0],
+		  ["9",  0,       4, 0],
 		  ["10",  0,       4, 10]
 		  
         ]);
