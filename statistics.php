@@ -25,15 +25,12 @@ error_reporting(-1);
 									if($avain == 0){
 										if($apu2 == "Drugcalculations"){
 											$laskuapu = 1;
-											echo $laskuapu;
 										}
 										if($apu2 == "Agents"){
 											$laskuapu = 2;
-												echo $laskuapu;
 										}
 										if($apu2 == "Unit conversions"){
 											$laskuapu = 3;
-												echo $laskuapu;
 										}									
 									}
 									if($avain == 1){
@@ -107,8 +104,8 @@ error_reporting(-1);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ["number", "Agents", "Drug calculations", "Unit conversions"],
-          ["1",  2,      5,	10],
-          ["2",  5,      1, 6],
+          ["1",  2,      '.$drugcal[0].',	10],
+          ["2",  5,      '.$drugcal[1].', 6],
           ["3",  0,       4, 4],
           ["4",  1,      7, 6],
 		  ["5",  5,       4, 9],
