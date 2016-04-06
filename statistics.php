@@ -23,8 +23,8 @@ error_reporting(-1);
 							tee_graafi();
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 							$laskuapu = 0;
-											foreach($stats as $rivi => $arvo){
-								echo $apu."---------------------<br>";
+							foreach($stats as $rivi => $arvo){
+								echo $rivi."---------------------<br>";
 								foreach($arvo as $avain => $apu2){
 									if($avain == 0){
 										if($apu2 == "Drugcalculations"){
