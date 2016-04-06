@@ -83,7 +83,7 @@ include ("BL.php");
 									echo $ap2." ap2<br>";
 							}
 							}*/
-							tee_graafi();
+							tee_graafi($drugcal);
 							echo '<div id="curve_chart" style="width: 900px; height: 500px; float: right" float:right></div>';
 					   ?>      
 
@@ -94,7 +94,7 @@ include ("BL.php");
     </div>
 </body>
 </html>
-<?php function tee_graafi( )
+<?php function tee_graafi($drugcal)
 {
  echo  '   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
