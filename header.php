@@ -1,4 +1,5 @@
 <?php
+
 ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
 error_reporting(-1);
@@ -9,46 +10,44 @@ if (!isset($_SESSION['login_user'])) {
     exit();
 }
 
-include ("BL.php");
-
 $content = <<<CONTENT
-<!DOCTYPE html>
-
-<html>
-    <head>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <title>Scarabeus</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="mainstyles.css">
-</head>
-<body>
-    <div id="wrapper">
-        <div id="header">
-            <h1>Welcome, {$_SESSION['login_user']}!</h1>
-            <div class="dropdown">
-            <button class="dropbtn">{$_SESSION['login_user']}</button>
-                <div class="dropdown-content">
-                    <a href="profile.php">Profile</a>
-                    <a href="logout.php">Logout</a>
-                </div>
-            </div>
-        </div>
-        <div id="main">
-            <div id="left">
-                <div id="left-1">
-                    <h2>Exercises</h2>
-                    <ul>
-                        <li><a href="llquiz.php">Drug identification</a></li>
-                        <li><a href="laskuquiz.php">Drug calculations</a></li>
-                        <li><a href="conversionquiz.php">Unit conversions</a></li>
-                    </ul>
-                </div>
-                <div id="left-2">
-				<h2><a href =statistics.php>Statistics</a></h2>
-                    
-CONTENT;
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>Scarabeus</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs">
+                <p>
+                    <a href="/"><i class="fa fa-home"></i></a> Hello, {$_SESSION['login_user']}!
+                </p>
+                <li class="dropdown pull-right">
+                     <a href="#" data-toggle="dropdown" class="dropdown-toggle">{$_SESSION['login_user']}<strong class="caret"></strong></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="profile.php"><i class="fa fa-cog"></i> Profile</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+CONTENT;
 echo $content;
-get_stats($_SESSION['login_user'],0);
-echo "</div></div>";
 ?>

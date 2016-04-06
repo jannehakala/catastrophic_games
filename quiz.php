@@ -20,7 +20,7 @@ if ($_SESSION['question'] == 10) {
     exit();
 }
 
-echo "<h1>Question " . ($_SESSION['question']+1) ." / 10</h1><br>";
+echo "<h2>Question " . ($_SESSION['question']+1) ." / 10</h2><br>";
 switch ($_SESSION['quiztype']) {
     case 'drugidentificationquiz':
         $question = new DrugIdentification($db_mysql);
@@ -30,6 +30,9 @@ switch ($_SESSION['quiztype']) {
         break;
     case 'unitconversionquiz':
         $question = new UnitConversion();
+        break;
+    case 'examquiz':
+        $question = new ExamQuiz($db_mysql);
         break;
     default:
         $question = new DrugIdentification($db_mysql);

@@ -3,9 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Register</title>
-	<style>
-		.error {color: #FF0000;}
-	</style>
+	<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <?php
@@ -70,18 +68,28 @@ if (isset($_POST['register'])) {
 		pg_close();
 	}
 }
+
 ?>
 
 <body>
-	<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
-		Username:<br>
-		<input type="text" name="username"><span class="error"> * <?php echo $nameErr; ?></span><br>
-		Password:<br>
-		<input type="password" name="password"><span class="error"> * <?php echo $passErr; ?></span><br>
-		Email:<br>
-		<input type="text" name="email"><span class="error"> * <?php echo $emailErr; ?></span><br>
-		<input type="submit" name="register" content="Register" value="Register">
-		<br><span> <?php echo $message; ?></span>
-	</form>
+	<div id="main">
+		<h1>Scarabeus</h1>
+		<div id="register">
+			<h2>Register</h2>
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+				Username<span> *</span><br>
+				<input type="text" name="username">
+				<span class="error">Username must be minimum 4 characters and contain only letters, numbers and spaces</span><br>
+				Password<span> *<br></span>
+				<input type="password" name="password">
+				<span class="error">Password must be minimum 8 character and contain only letters and numbers</span><br>
+				Email<span> *</span><br>
+				<input type="text" name="email">
+				<span class="error">Invalid email format</span><br>
+				<input type="submit" name="register" content="Register" value="Register">
+				<br><span></span>
+			</form>
+		</div>
+	</div>
 </body>
 </html>

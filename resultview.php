@@ -1,31 +1,41 @@
 <!DOCTYPE html>
+<?php
+include ("header.php");
+include ("BL.php");
+?>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="jumbotron">
+                        <?php
+                            include 'result.php';
+                        ?>
+                        <form action="index.php">
+                            <input type="submit" value="back to home" class="btn btn-primary">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="exercises">
+                        <h2>Exercises</h2>
+                        <ul>
+                            <li><a href="llquiz.php">Drug identification</a></li>
+                            <li><a href="laskuquiz.php">Drug calculations</a></li>
+                            <li><a href="conversionquiz.php">Unit conversions</a></li>
+                            <li><a href="examquiz.php">Exam</a></li>
+                        </ul>
+                    </div>
+                    <h2>Statistics</h2>
+                    <?php get_stats($_SESSION['login_user'],0); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<html>
-	<head>
-	<meta charset="utf-8">
-	<title>Scarabeus</title>
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="mainstyles.css">
-</head>
-<body>
-	<div id="wrapper">
-		<div id="header">
-			<h1>Welcome</h1>
-			<select>
-				<option>Profile</option>
-			</select>
-		</div>
-
-		<div id="main">
-			<div id="content">
-				<?php
-				include 'result.php';
-				?>
-				<form action="index.php">
-					<input type="submit" value="back to home">
-				</form>
-			</div>
-		</div>
-	</div>
-</body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>

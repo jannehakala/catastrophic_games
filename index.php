@@ -1,10 +1,5 @@
 <?php
-
-ini_set('display_startup_errors',1);
-ini_set('display_errors',1);
-error_reporting(-1);
-
-session_start();
+//session_start();
 include('login.php');
 
 if(isset($_SESSION['login_user'])){
@@ -25,9 +20,9 @@ if(isset($_SESSION['login_user'])){
         <div id="login">
             <h2>Login</h2>
             <form action="" method="post">
-                <label>Username :</label>
+                <label>Username</label>
                 <input id="name" name="username" placeholder="username" type="text">
-                <label>Password :</label>
+                <label>Password</label>
                 <input id="password" name="password" placeholder="**********" type="password">
                 <input name="submit" type="submit" value=" Login ">
                 <span><?php echo $_SESSION['error']; ?></span>

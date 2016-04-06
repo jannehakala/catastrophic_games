@@ -55,9 +55,9 @@ order by rand() limit 3;"
         printf($this->template, $this->substance);
         echo "<form method=POST>";
         foreach ($this->choices as $choice) {
-            echo "<input type=radio name=ans value={$choice}>{$choice}<br>";
+            echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice}</label><br>";
         }
-        echo "<input type=submit name=next value=Seuraava>";
+        echo '<input type=submit name=next value=Seuraava class="btn btn-primary">';
         echo "</form>";
     }
 }
@@ -97,6 +97,7 @@ class DCQuestion1 {
         "Amoriinia käytetaan mm. virtsatietulehduksen hoitoon. Sitä on olemassa oraalinesteenä, jonka vahvuus<br>
         on 50mg/ml. Lasten vaikeisiin infektioihin tätä tulee antaa 40mg/kg/vrk jaettuna kolmeen (3) antokertaan.<br>
         Laske kerta-annos millilitroina %d kg painavalle lapselle.",
+
         "Lapselle on määrätty vaikean infektion hoitoon kefakloria per os 40 mg painokiloa kohti vuorokaudessa,<br>
         jaettuna kolmeen annokseen. Kefaklori- oraalinesteen vahvuus on 50 mg / ml. Montako millilitraa on kerta-annos,<br>
         kun lapsi painaa %d kg?"
@@ -132,10 +133,10 @@ class DCQuestion1 {
         printf($this->template, $this->weight);
         echo "<form method=POST>";
         foreach ($this->choices as $choice) {
-            echo "<input type=radio name=ans value={$choice}>{$choice} ml<br>";
+            echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice} ml</label><br>";
         }
         // echo "<input type=number name=ans><br>";
-        echo "<input type=submit name=next value=Seuraava>";
+        echo '<input type=submit name=next value=Seuraava class="btn btn-primary">';
         echo "</form>";
     }
 }
@@ -192,10 +193,10 @@ class DCQuestion2 {
         printf_array($this->template, $this->data);
         echo "<form method=POST>";
         foreach ($this->choices as $choice) {
-            echo "<input type=radio name=ans value={$choice}>{$choice} ml<br>";
+            echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice} ml</label><br>";
         }
         // echo "<input type=number name=ans><br>";
-        echo "<input type=submit name=next value=Seuraava>";
+        echo '<input type=submit name=next value=Seuraava class="btn btn-primary">';
         echo "</form>";
     }
 }
@@ -247,10 +248,10 @@ class DCQuestion3 {
         printf_array($this->template, $this->data);
         echo "<form method=POST>";
         foreach ($this->choices as $choice) {
-            echo "<input type=radio name=ans value={$choice}>{$choice} mg<br>";
+            echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice} mg</label><br>";
         }
         // echo "<input type=number name=ans><br>";
-        echo "<input type=submit name=next value=Seuraava>";
+        echo '<input type=submit name=next value=Seuraava class="btn btn-primary">';
         echo "</form>";
     }
 }
@@ -286,6 +287,7 @@ class UCQuestion1 {
     private $templates = array(
         "Lääkäri on määrännyt potilaalle lääkettä %d mikrogrammaa. Tabletin vahvuus on %.2f milligrammaa.<br>
         Montako tablettia potilaalle annetaan?",
+
         "Lääkettä tulee antaa %d mikrogrammaa. Montako tablettia annat, jos yhden tabletin vahvuus on %.2f milligrammaa?"
     );
     
@@ -328,9 +330,9 @@ class UCQuestion1 {
         printf_array($this->template, $this->data);
         echo "<form method=POST>";
         foreach ($this->choices as $choice) {
-            echo "<input type=radio name=ans value={$choice}>{$choice}<br>";
+            echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice}</label><br>";
         }
-        echo "<input type=submit name=next value=Seuraava>";
+        echo '<input type=submit name=next value=Seuraava class="btn btn-primary">';
         echo "</form>";
     }
 }
@@ -400,9 +402,35 @@ class UCQuestion2 {
         printf_array($this->template, $this->data);
         echo "<form method=POST>";
         foreach ($this->choices as $choice) {
-            echo "<input type=radio name=ans value={$choice}>{$choice}<br>";
+            echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice} mg</label><br>";
         }
-        echo "<input type=submit name=next value=Seuraava>";
+        echo '<input type=submit name=next value=Seuraava class="btn btn-primary">';
         echo "</form>";
+    }
+}
+
+
+// Exam quiz. Has questions from every category.
+class ExamQuiz {
+
+    function __construct($db)
+    {
+        // Choose a random question type.
+        switch (mt_rand(1, 3)) {
+            case 1:
+                $this->question = new DrugIdentification($db);
+                break;
+            case 2:
+                $this->question = new DrugCalculation();
+                break;
+            case 3:
+                $this->question = new UnitConversion();
+                break;
+        }
+    }
+    
+    public function printQuestion()
+    {
+        $this->question->printQuestion();
     }
 }
