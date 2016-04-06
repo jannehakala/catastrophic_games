@@ -22,7 +22,7 @@
 				include 'result.php';
 				?>
 				<form action="index.php">
-				<input type="submit" value="back to home">
+					<input type="submit" value="back to home">
 				</form>
 			</div>
 		</div>
