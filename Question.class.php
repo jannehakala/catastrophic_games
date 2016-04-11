@@ -102,7 +102,7 @@ class DCQuestion1 {
     private $templates = array(
         "Amorion is used eg. treating urinary tract infections. It is available as an oral liquid with a strength<br>
          of 50mg / ml. For children's severe infections this should be administered 40mg / kg / day divided into three (3) doses.<br>
-         Calculate a single dose in milliliters for a child weighing %d kg."
+         Calculate a single dose in milliliters for a child weighing %d kg.",
 
         "The child has been prescribed cefaclor for the treatment of severe infection 40mg / kg / day<br> divided into three (3) doses.<br>
 		The strength of the cefaclor oral liquid is 50 mg / mL. How many milliliters is a single-dose,<br>
@@ -155,7 +155,7 @@ class DCQuestion2 {
     private $choices = array();
     private $templates = array(
         "%dml solution of potassium permanganate contains %d percent of the substance.<br>
-		How much water do you need to dilute the entire amount to %.1f percent?"
+		How much water do you need to dilute the entire amount to %.1f percent?",
         
         "How much of water must be added in order to dilute a %dml percent solution to a %.1f percent solution?"
     );
@@ -291,7 +291,7 @@ class UCQuestion1 {
     private $choices = array();
     private $templates = array(
         "The doctor has prescribed a certain drug for the patient %d micrograms. The strength of one tablet is %.2f milligrams.<br>
-         How many tablets are given to the patient? "
+         How many tablets are given to the patient?",
 
         "The medicine should be administered %d micrograms. How many tablets do you give to the patient, the strength of one tablet is %.2f milligrams?"
     );
