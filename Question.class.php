@@ -16,7 +16,7 @@ class DrugIdentification {
     private $templates = array(
         "What is the substance for %s?",
         "Select the substance for %s",
-        "The doctor instructs %s for the patient. What is the substance of this drug?",
+        "The doctor prescribes %s for the patient. What is the substance of this drug?",
         "The substance for %s is..."
     );
     
@@ -57,7 +57,7 @@ order by rand() limit 3;"
         foreach ($this->choices as $choice) {
             echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice}</label><br>";
         }
-        echo '<input type=submit name=next value=Seuraava class="btn btn-primary">';
+        echo '<input type=submit name=next value=Next class="btn btn-primary">';
         echo "</form>";
     }
 	
@@ -100,13 +100,13 @@ class DCQuestion1 {
     private $choices = array();
 
     private $templates = array(
-        "Amoriinia käytetaan mm. virtsatietulehduksen hoitoon. Sitä on olemassa oraalinesteenä, jonka vahvuus<br>
-        on 50mg/ml. Lasten vaikeisiin infektioihin tätä tulee antaa 40mg/kg/vrk jaettuna kolmeen (3) antokertaan.<br>
-        Laske kerta-annos millilitroina %d kg painavalle lapselle.",
+        "Amorion is used eg. treating urinary tract infections. It is available as an oral liquid with a strength<br>
+         of 50mg / ml. For children's severe infections this should be administered 40mg / kg / day divided into three (3) doses.<br>
+         Calculate a single dose in milliliters for a child weighing %d kg."
 
-        "Lapselle on määrätty vaikean infektion hoitoon kefakloria per os 40 mg painokiloa kohti vuorokaudessa,<br>
-        jaettuna kolmeen annokseen. Kefaklori- oraalinesteen vahvuus on 50 mg / ml. Montako millilitraa on kerta-annos,<br>
-        kun lapsi painaa %d kg?"
+        "The child has been prescribed cefaclor for the treatment of severe infection 40mg / kg / day<br> divided into three (3) doses.<br>
+		The strength of the cefaclor oral liquid is 50 mg / mL. How many milliliters is a single-dose,<br>
+		when the child weighs %d kg? "
     );
     
     function __construct()
@@ -142,7 +142,7 @@ class DCQuestion1 {
             echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice} ml</label><br>";
         }
         // echo "<input type=number name=ans><br>";
-        echo '<input type=submit name=next value=Seuraava class="btn btn-primary">';
+        echo '<input type=submit name=next value=Next class="btn btn-primary">';
         echo "</form>";
     }
 }
@@ -154,11 +154,10 @@ class DCQuestion2 {
     private $data = array();
     private $choices = array();
     private $templates = array(
-        "Käytettävissäsi on %dml %d-prosenttista kaliumpermanganaattiliuosta.<br>
-        Paljonko tarvitset vettä laimentaessasi koko määrän %.1f-prosenttiseksi?",
+        "%dml solution of potassium permanganate contains %d percent of the substance.<br>
+		How much water do you need to dilute the entire amount to %.1f percent?"
         
-        "Paljonko täytyy lisätä vettä, jotta %dml %d-prosenttista liuosta laimenee<br>
-        %.1f-prosenttiseksi liuokseksi?"
+        "How much of water must be added in order to dilute a %dml percent solution to a %.1f percent solution?"
     );
     
     function __construct()
@@ -202,7 +201,7 @@ class DCQuestion2 {
             echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice} ml</label><br>";
         }
         // echo "<input type=number name=ans><br>";
-        echo '<input type=submit name=next value=Seuraava class="btn btn-primary">';
+        echo '<input type=submit name=next value=Next class="btn btn-primary">';
         echo "</form>";
     }
 }
@@ -213,9 +212,9 @@ class DCQuestion3 {
     private $data = array();
     private $choices = array();
     private $templates = array(
-        "Asukas käyttää Hydrocortison-geeliä, jonka vahvuus on %.1f -prosenttia.<br>
-        Kuinka monta milligrammaa vaikuttavaa ainetta eli hydrokortisonia on geelituubissa,<br>
-        jonka massa on %d g?"
+        "A patient uses Hydrocortison gel. The strength of the gel is %.1f percent.<br>
+		How many milligrams of the substance, ie hydrocortisone, is in the tube,<br>
+		which has a mass of %d g?"
     );
     
     function __construct()
@@ -257,7 +256,7 @@ class DCQuestion3 {
             echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice} mg</label><br>";
         }
         // echo "<input type=number name=ans><br>";
-        echo '<input type=submit name=next value=Seuraava class="btn btn-primary">';
+        echo '<input type=submit name=next value=Next class="btn btn-primary">';
         echo "</form>";
     }
 }
@@ -291,10 +290,10 @@ class UCQuestion1 {
     private $data = array();
     private $choices = array();
     private $templates = array(
-        "Lääkäri on määrännyt potilaalle lääkettä %d mikrogrammaa. Tabletin vahvuus on %.2f milligrammaa.<br>
-        Montako tablettia potilaalle annetaan?",
+        "The doctor has prescribed a certain drug for the patient %d micrograms. The strength of one tablet is %.2f milligrams.<br>
+         How many tablets are given to the patient? "
 
-        "Lääkettä tulee antaa %d mikrogrammaa. Montako tablettia annat, jos yhden tabletin vahvuus on %.2f milligrammaa?"
+        "The medicine should be administered %d micrograms. How many tablets do you give to the patient, the strength of one tablet is %.2f milligrams?"
     );
     
     function __construct()
@@ -338,7 +337,7 @@ class UCQuestion1 {
         foreach ($this->choices as $choice) {
             echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice}</label><br>";
         }
-        echo '<input type=submit name=next value=Seuraava class="btn btn-primary">';
+        echo '<input type=submit name=next value=Next class="btn btn-primary">';
         echo "</form>";
     }
 }
@@ -350,18 +349,18 @@ class UCQuestion2 {
     private $data = array();
     private $choices = array();
     private $templates = array(
-        "Potilaalle on määrätty %d tippaa liuosta korvaan %d kertaa vuorokaudessa.<br>
-        Yksi millilitra tippoja sisältää vaikuttavaa ainetta %.2f mg.<br>
-        Jos 1ml vastaa 20 tippaa, niin kuinka paljon vaikuttavaa ainetta potilas saa päivässä?<br>
-        Anna vastaus mikrogrammoina.",
+        "The patient has been prescribed for %d drops of solution in the ear %d times a day.<br>
+         Each ml of drops contain %.2f mg of the substance.<br>
+         If 1 ml is equivalent to 20 drops, how much of the substance the patient receives in a day?<br>
+         Give your answer in micrograms.",
         
-        "Potilas saa korvatippoja %d kappaletta %d kertaa päivässä. Kuinka paljon vaikuttavaa ainetta<br>
-        potilas saa päivässä, jos yhdessä tipassa on %.2f milligrammaa vaikuttavaa ainetta? 1ml = 20 tippaa.",
+        "The patient has been prescribed to use ear drops %d drops %d times a day. How much of the active substance<br>
+         the patient receives a day, when one drop constains %.2f milligrams of active ingredient? 1ml = 20 drops.",
         
-        "Liisan korvan hoitoon käytetään Locacorten-vioform-lääkettä. Ohjeena on %d tippaa<br>
-        %d kertaa vuorokaudessa. Hoito kestää 10 vuorokautta. Yksi (1) millilitra korvatippoja sisältää<br>
-        vaikuttavaa ainetta flumetasonipivalaattia %.2f mg. Jos 1ml vastaa 20 tippaa, niin kuinka paljon<br>
-        flumetasonipivalaattia Liisa saa päivässä? Anna vastaus mikrogrammoina."
+        "Alice has been prescribed to use Locacorten-vioform medicine to treat her ear. Guideline is %d drops<br>
+         %d times a day. The treatment lasts for 10 days. One (1) milliliter of ear drops contains<br>
+         flumethasone pivalate %.2f mg. If 1ml is equivalent to 20 drops, how much<br>
+         flumethasone pivalate Alice gets a day? Give your answer in micrograms."
     );
     
     function __construct()
@@ -410,7 +409,7 @@ class UCQuestion2 {
         foreach ($this->choices as $choice) {
             echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice} mg</label><br>";
         }
-        echo '<input type=submit name=next value=Seuraava class="btn btn-primary">';
+        echo '<input type=submit name=next value=Next class="btn btn-primary">';
         echo "</form>";
     }
 }
