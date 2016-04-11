@@ -40,7 +40,7 @@ where laakenimi in
 order by rand() limit 3;"
         );
         $row = $result->fetch(PDO::FETCH_ASSOC);
-        $this->substance = translateSubstance($row['laakenimi']);
+        $this->substance = $this->translateSubstance($row['laakenimi']);
         $this->answer = $row['selites'];
         $_SESSION['correct_answer'] = $this->answer;
         array_push($this->choices, $this->answer);
