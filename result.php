@@ -1,11 +1,28 @@
 
 <?php
 
-// session_start();
-
 require_once("BL.php");
+
 echo "<h1>Your score: " . $_SESSION['score'] . "</h1><br>";
-set_stats($_SESSION['login_user'], 'drugcalculations', $_SESSION['score']);
-$_SESSION['score'] = 0;
+
+switch ($_SESSION['quiztype']) {
+    case 'drugidentificationquiz':
+        $exercisetype = "Drug identification";
+        break;
+    case 'drugcalculationquiz':
+        $exercisetype = "Drug calculations";
+        break;
+    case 'unitconversionquiz':
+        $exercisetype = "Unit conversions";
+        break;
+    case 'examquiz':
+        $exercisetype = "Exam";
+        break;
+    default:
+        $question = new DrugIdentification($db_mysql);
+        break;
+}
+
+set_stats($_SESSION['login_user'], $exercisetype, $_SESSION['score']);
 
 ?>

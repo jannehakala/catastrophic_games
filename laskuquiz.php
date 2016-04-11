@@ -34,7 +34,7 @@ else $_SESSION['score'] = 0;
                         </ul>
                     </div>
                     <h2>Statistics</h2>
-                    <?php get_stats($_SESSION['login_user'],0); ?>
+                    <?php printstatistics($_SESSION['login_user']); ?>
                 </div>
             </div>
         </div>
