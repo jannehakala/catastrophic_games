@@ -101,8 +101,8 @@ class DCQuestion1 {
 
     private $templates = array(
         "Amorion is used eg. treating urinary tract infections. It is available as an oral liquid with a strength<br>
-         of 50mg / ml. For children's severe infections this should be administered 40mg / kg / day divided into three (3) doses.<br>
-         Calculate a single dose in milliliters for a child weighing %d kg.",
+		of 50mg / ml. For children's severe infections this should be administered 40mg / kg / day divided into three (3) doses.<br>
+		Calculate a single dose in milliliters for a child weighing %d kg.",
 
         "The child has been prescribed cefaclor for the treatment of severe infection 40mg / kg / day<br> divided into three (3) doses.<br>
 		The strength of the cefaclor oral liquid is 50 mg / mL. How many milliliters is a single-dose,<br>
@@ -291,7 +291,7 @@ class UCQuestion1 {
     private $choices = array();
     private $templates = array(
         "The doctor has prescribed a certain drug for the patient %d micrograms. The strength of one tablet is %.2f milligrams.<br>
-         How many tablets are given to the patient?",
+		How many tablets are given to the patient?",
 
         "The medicine should be administered %d micrograms. How many tablets do you give to the patient, the strength of one tablet is %.2f milligrams?"
     );
@@ -350,17 +350,17 @@ class UCQuestion2 {
     private $choices = array();
     private $templates = array(
         "The patient has been prescribed for %d drops of solution in the ear %d times a day.<br>
-         Each ml of drops contain %.2f mg of the substance.<br>
-         If 1 ml is equivalent to 20 drops, how much of the substance the patient receives in a day?<br>
-         Give your answer in micrograms.",
+		Each ml of drops contain %.2f mg of the substance.<br>
+		If 1 ml is equivalent to 20 drops, how much of the substance the patient receives in a day?<br>
+		Give your answer in micrograms.",
         
         "The patient has been prescribed to use ear drops %d drops %d times a day. How much of the active substance<br>
-         the patient receives a day, when one drop constains %.2f milligrams of active ingredient? 1ml = 20 drops.",
+		the patient receives a day, when one drop constains %.2f milligrams of active ingredient? 1ml = 20 drops.",
         
         "Alice has been prescribed to use Locacorten-vioform medicine to treat her ear. Guideline is %d drops<br>
-         %d times a day. The treatment lasts for 10 days. One (1) milliliter of ear drops contains<br>
-         flumethasone pivalate %.2f mg. If 1ml is equivalent to 20 drops, how much<br>
-         flumethasone pivalate Alice gets a day? Give your answer in micrograms."
+		%d times a day. The treatment lasts for 10 days. One (1) milliliter of ear drops contains<br>
+		flumethasone pivalate %.2f mg. If 1ml is equivalent to 20 drops, how much<br>
+		flumethasone pivalate Alice gets a day? Give your answer in micrograms."
     );
     
     function __construct()
