@@ -14,10 +14,10 @@ class DrugIdentification {
     protected $choices = array();
 
     private $templates = array(
-        "Mikä on valmisteen %s vaikuttava aine?",
-        "Valitse vaikuttava aine valmisteelle %s",
-        "Lääkäri määrää potilaalle %s. Mikä on sen vaikuttava aine?",
-        "Lääkevalmisteen %s vaikuttava aine on..."
+        "What is the substance for %s?",
+        "Select the substance for %s",
+        "The doctor instructs %s for the patient. What is the substance of this drug?",
+        "The substance for %s is..."
     );
     
     function __construct($db)
@@ -40,7 +40,7 @@ where laakenimi in
 order by rand() limit 3;"
         );
         $row = $result->fetch(PDO::FETCH_ASSOC);
-        $this->substance = $row['laakenimi'];
+        $this->substance = translateSubstance($row['laakenimi']);
         $this->answer = $row['selites'];
         $_SESSION['correct_answer'] = $this->answer;
         array_push($this->choices, $this->answer);
@@ -60,6 +60,12 @@ order by rand() limit 3;"
         echo '<input type=submit name=next value=Seuraava class="btn btn-primary">';
         echo "</form>";
     }
+	
+	public function translateSubstance($index) 
+	{
+		$translations = array("Ibuprofeiini" => "Ibuprofen", "Parasetamoli" => "Paracetamol", "Varfariini" => "Warfarin", "Pivmesillinaami" => "Pivmecillinam", "Trimetopriimi" => "Trimethoprim", "Amoksisilliini" => "Amoxicillin", "Fenoksimetyylipenisilliini" => "Phenoxymethylpenicillin", "Meftormiini" => "Metformin", "Salbutamoli" => "Salbutamol", "Salmeteroli ja flutikasoni" => "Salmeterol and fluticasone", "Prednisoni" => "Prednisone", "Levotyroksiininatrium" => "Levothyroxinum natricum", "Simvastatiini" => "Simvastatin", "Setiritsiini" => "Cetirizine", "Oksikodoni" => "Oxycodone", "Glarginsuliini" => "Insulin glargine", "Esomepratsoli" => "Esomeprazole", "Lisinopriili" => "Lisinopril", "Furosemidi" => "Furosemide", "Nifedipiini" => "Nifedipine", "Labetalolihydrokloridi" => "Labetalol hydrochloride", "Atosibaani" => "Atosiban");
+		return $translations[$index];
+	}
 }
 
 
