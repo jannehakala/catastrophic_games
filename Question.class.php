@@ -63,7 +63,7 @@ order by rand() limit 3;"
 	
 	public function translateSubstance($index) 
 	{
-		$translations = array("Ibuprofeeni" => "Ibuprofen", "Parasetamoli" => "Paracetamol", "Varfariini" => "Warfarin", "Pivmesillinaami" => "Pivmecillinam", "Trimetopriimi" => "Trimethoprim", "Amoksisilliini" => "Amoxicillin", "Fenoksimetyylipenisilliini" => "Phenoxymethylpenicillin", "Metformiini" => "Metformin", "Salbutamoli" => "Salbutamol", "Salmeteroli ja flutikasoni" => "Salmeterol and fluticasone", "Prednisoni" => "Prednisone", "Levotyroksiininatrium" => "Levothyroxinum natricum", "Simvastatiini" => "Simvastatin", "Setiritsiini" => "Cetirizine", "Oksikodoni" => "Oxycodone", "Glargininsuliini" => "Insulin glargine", "Esomepratsoli" => "Esomeprazole", "Lisinopriili" => "Lisinopril", "Furosemidi" => "Furosemide", "Nifedipiini" => "Nifedipine", "Labetalolihydrokloridi" => "Labetalol hydrochloride", "Atosibaani" => "Atosiban");
+		$translations = array("Ibuprofeeni" => "Ibuprofen", "Parasetamoli" => "Paracetamol", "Varfariini" => "Warfarin", "Pivmesillinaami" => "Pivmecillinam", "Trimetopriimi" => "Trimethoprim", "Amoksisilliini" => "Amoxicillin", "Fenoksimetyylipenisilliini" => "Phenoxymethylpenicillin", "Metformiini" => "Metformin", "Salbutamoli" => "Salbutamol", "Salmeteroli ja flutikasoni" => "Salmeterol and fluticasone", "Prednisoni" => "Prednisone", "Levotyroksiininatrium" => "Levothyroxinum natricum", "Simvastatiini" => "Simvastatin", "Setiritsiini" => "Cetirizine", "Oksikodoni" => "Oxycodone", "Glargininsuliini" => "Insulin glargine", "Esomepratsoli" => "Esomeprazole", "Lisinopriili" => "Lisinopril", "Furosemidi" => "Furosemide", "Nifedipiini" => "Nifedipine", "Labetaloli" => "Labetalol", "Atosibaani" => "Atosiban");
 		return $translations[$index];
 	}
 }
