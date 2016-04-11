@@ -45,7 +45,7 @@ order by rand() limit 3;"
         $_SESSION['correct_answer'] = $this->answer;
         array_push($this->choices, $this->answer);
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-            array_push($this->choices, $this->($row['selites']));
+            array_push($this->choices, $this->translateSubstance($row['selites']));
         }
         shuffle($this->choices);
     }
