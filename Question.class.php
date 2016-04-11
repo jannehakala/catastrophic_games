@@ -40,12 +40,12 @@ where laakenimi in
 order by rand() limit 3;"
         );
         $row = $result->fetch(PDO::FETCH_ASSOC);
-        $this->substance = $this->translateSubstance($row['laakenimi']);
-        $this->answer = $row['selites'];
+        $this->substance = $row['laakenimi'];
+        $this->answer = $this->translateSubstance($row['selites']);
         $_SESSION['correct_answer'] = $this->answer;
         array_push($this->choices, $this->answer);
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-            array_push($this->choices, $row['selites']);
+            array_push($this->choices, $this->($row['selites']));
         }
         shuffle($this->choices);
     }
