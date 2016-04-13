@@ -11,7 +11,7 @@ ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
 error_reporting(-1);
 
-require_once("dbinit.php");
+//require_once("dbinit.php");
 require_once("User.class.php");
 $user = new User($db);
 $nameErr = "";
@@ -52,17 +52,17 @@ if (isset($_POST['register'])) {
 		$password = $_POST['password'];
 		
 		if (!preg_match('/^(?=.*\d)(?=.*[A-Öa-ö])[0-9A-Öa-ö!@#$%&\/\(\)=\[\]\{\}]{8,}$/', $password)) {
-			$passErr = "Password must be minimum 8 character and contain letter, numbers, spaces and special letters";
+			$passErr = "Password must be minimum 8 character and contain only letters and numbers";
 		}
 	}
 
 	if (empty($nameErr) && empty($emailErr) && empty($passErr)) {
 		if ($user->register($username, $password)) {
-			echo "Käyttäjätunnus luotu onnistuneesti";
+			echo "User registered!";
 			header("Location: /");
 			exit();
 		} else {
-			echo "Käyttäjätunnuksen luonti epäonnistui!";
+			echo "User registration failed!";
 		}
 
 		pg_close();
@@ -79,13 +79,13 @@ if (isset($_POST['register'])) {
 			<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
 				Username<span> *</span><br>
 				<input type="text" name="username">
-				<span class="error">Username must be minimum 4 characters and contain only letters, numbers and spaces</span><br>
+				<span class="error"><?php echo $nameErr; ?></span><br>
 				Password<span> *<br></span>
 				<input type="password" name="password">
-				<span class="error">Password must be minimum 8 character and contain only letters and numbers</span><br>
+				<span class="error"><?php echo $passErr; ?></span><br>
 				Email<span> *</span><br>
 				<input type="text" name="email">
-				<span class="error">Invalid email format</span><br>
+				<span class="error"><?php echo $emailErr; ?></span><br>
 				<input type="submit" name="register" content="Register" value="Register">
 				<br><span></span>
 			</form>
