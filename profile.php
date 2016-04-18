@@ -22,7 +22,7 @@ include ("BL.php");
                             <li><a href="examquiz.php">Exam</a></li>
                         </ul>
                     </div>
-                    <h2>Statistics</h2>
+                    <h2><a href="statistics.php">Statistics</a></h2>
                     <?php printstatistics($_SESSION['login_user']); ?>
                 </div>
             </div>

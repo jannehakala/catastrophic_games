@@ -11,7 +11,8 @@ if (!isset($_SESSION['login_user'])) {
 }
 
 $content = <<<CONTENT
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,27 +28,27 @@ $content = <<<CONTENT
   <body>
 
     <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <ul class="nav nav-tabs">
-                <p>
-                    <a href="/"><i class="fa fa-home"></i></a> Hello, {$_SESSION['login_user']}!
-                </p>
-                <li class="dropdown pull-right">
-                     <a href="#" data-toggle="dropdown" class="dropdown-toggle">{$_SESSION['login_user']}<strong class="caret"></strong></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="profile.php"><i class="fa fa-cog"></i> Profile</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-tabs">
+                    <p>
+                        <a href="/"><i class="fa fa-home"></i></a> Hello, {$_SESSION['login_user']}!
+                    </p>
+                    <li class="dropdown pull-right">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">{$_SESSION['login_user']}<strong class="caret"></strong></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="profile.php"><i class="fa fa-cog"></i> Profile</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
 CONTENT;
 echo $content;
 ?>

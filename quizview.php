@@ -17,6 +17,11 @@ include ("BL.php");
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .jumbotron {
+            font-size: large;
+        }
+    </style>
   </head>
   <body>
 

@@ -12,7 +12,7 @@ if (isset($_POST['next'])) {
     exit();
 }
 if ($_SESSION['question'] == 10) {
-    $_SESSION['question'] = 0;
+    // $_SESSION['question'] = 0;
     header("Location: resultview.php");
     exit();
 }

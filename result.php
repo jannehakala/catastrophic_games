@@ -23,6 +23,9 @@ switch ($_SESSION['quiztype']) {
         break;
 }
 
-set_stats($_SESSION['login_user'], $exercisetype, $_SESSION['score']);
+if ($_SESSION['question'] != 0) {
+    set_stats($_SESSION['login_user'], $exercisetype, $_SESSION['score']);
+    $_SESSION['question'] = 0;
+}
 
 ?>
