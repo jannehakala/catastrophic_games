@@ -5132,6 +5132,7 @@ a.badge:hover {
 @media screen and (min-width: 768px) {
     #main {
         width: inherit;
+        margin: 0;
     }
 
     .jumbotron {
