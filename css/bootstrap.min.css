@@ -2535,7 +2535,7 @@ table th[class*=col-] {
 }
 @media screen and (max-width: 767px) {
 	#main {
-        width: 80%;
+        width: 95%;
         margin: 0 auto;
     }
 
