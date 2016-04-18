@@ -8,7 +8,7 @@ $user = new User($db);
 
 if (isset($_POST['submit'])) {
     if (empty($_POST['username']) || empty($_POST['password'])) {
-        $error = "Username or Password is invalid";
+        $_SESSION['errMsg'] = "Please input both username and password.";
     }
     else
     {
@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
             exit();
         }
         else {
-            $_SESSION['error'] = "Wrong username of password";
+            $_SESSION['errMsg'] = "Wrong username and/or password.";
             header("Location: /");
             exit();
         }
