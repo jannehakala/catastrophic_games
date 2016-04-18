@@ -9,7 +9,8 @@ include ("BL.php");
                 <div class="col-md-9">
                     <div class="jumbotron">
                         <h2>Scarabeus</h2>
-                        <p>Welcome to Scarabeus learning environment!</p>
+                        <h3>Welcome to Scarabeus learning environment!</h3>
+                        <p>Start now your own learning progress by selecting exercises you want to practice! You can find the exercises in the left panel called "Exercises".  There is three types of exercises: "Drug identification", "Drug calculations" and "Unit conversions". If you want to test your knowledge you can select Exam.  In exam there is questions from all of these three exercise categories mixed up.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
