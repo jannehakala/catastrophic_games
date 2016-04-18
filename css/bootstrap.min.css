@@ -2543,6 +2543,12 @@ table th[class*=col-] {
         width: inherit;
     }
 
+    .container .jumbotron,
+    .container-fluid .jumbotron {
+        padding: 5px 0 20px 0;
+        margin-top: 20px;
+    }
+
     .container-fluid {
 		padding-right: 15px;
 		padding-left: 15px;
