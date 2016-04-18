@@ -142,6 +142,7 @@ class DCQuestion1 {
             echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice} ml</label><br>";
         }
         // echo "<input type=number name=ans><br>";
+        echo "<textarea rows='6'></textarea>";
         echo '<input type=submit name=next value=Next class="btn btn-primary">';
         echo "</form>";
     }
