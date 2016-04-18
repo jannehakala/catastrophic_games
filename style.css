@@ -11,8 +11,10 @@ src: local('Myriad Pro Regular'), url('MYRIADPRO-REGULAR.woff') format('woff');
 }
 
 #main {
+    /*
     width:960px;
     margin:50px auto;
+    */
     /*font-family:serif;*/
 }
 
