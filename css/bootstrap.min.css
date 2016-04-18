@@ -5130,6 +5130,10 @@ a.badge:hover {
     max-width: 100%
 }
 @media screen and (min-width: 768px) {
+    #main {
+        width: inherit;
+    }
+
     .jumbotron {
         padding-top: 20px;
         padding-bottom: 48px
