@@ -158,7 +158,7 @@ class DCQuestion2 {
         "%dml solution of potassium permanganate contains %d percent of the substance.<br>
 		How much water do you need to dilute the entire amount to %.1f percent?",
         
-        "How much of water must be added in order to dilute a %dml percent solution to a %.1f percent solution?"
+        "How much of water must be added in order to dilute %dml of %.1f-percent solution to a %.1f percent solution?"
     );
     
     function __construct()
@@ -408,7 +408,7 @@ class UCQuestion2 {
         printf_array($this->template, $this->data);
         echo "<form method=POST>";
         foreach ($this->choices as $choice) {
-            echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice} mg</label><br>";
+            echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice} &#181;g</label><br>";
         }
         echo '<input type=submit name=next value=Next class="btn btn-primary">';
         echo "</form>";
