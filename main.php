@@ -20,10 +20,12 @@ include ("BL.php");
                          If you press that button it will take you to the statistics page where you can see all your stats.
                           In this "statistics" page there will be also generated different kind of diagrams which show you yours progresses.</p>
                           <b>Hints:</b>
-                          <p style="font-size:100%;">Blue house at the left corner will take you back to the main view.  </p>
-                          <p style="font-size:100%;">In green dropdown button you will find selections: "profile" and "log out". 
-                            Profile will take you to the profile page and log out will end your session. </p>
-                            <br><br>
+                          <ul>
+                          <li><p style="font-size:100%;">Blue house at the left corner will take you back to the main view.  </p></li>
+                          <li><p style="font-size:100%;">In green dropdown button you will find selections: "profile" and "log out". 
+                            Profile will take you to the profile page and log out will end your session. </p></li>
+                        </ul>
+                            <br>
                             Have fun!
                     </div>
                 </div>
