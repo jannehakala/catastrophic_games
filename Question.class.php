@@ -53,12 +53,10 @@ order by rand() limit 3;"
     public function printQuestion()
     {
         printf($this->template, $this->substance);
-        echo "<form method=POST>";
+        echo '<br>';
         foreach ($this->choices as $choice) {
-            echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice}</label><br>";
+            echo '<input type=radio id="' . $choice . '" name=ans value="' . $choice . '"><label for="' . $choice .'">' . $choice . '</label><br>';
         }
-        echo '<input type=submit name=next value=Next class="btn btn-primary">';
-        echo "</form>";
     }
 	
 	public function translateSubstance($index) 
@@ -137,14 +135,11 @@ class DCQuestion1 {
     public function printQuestion()
     {
         printf($this->template, $this->weight);
-        echo "<form method=POST>";
+        echo '<br>';
         foreach ($this->choices as $choice) {
             echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice} ml</label><br>";
         }
-        // echo "<input type=number name=ans><br>";
-        echo "<textarea rows='6'></textarea>";
-        echo '<input type=submit name=next value=Next class="btn btn-primary">';
-        echo "</form>";
+        echo "<textarea rows='6'></textarea><br>";
     }
 }
 
@@ -197,13 +192,10 @@ class DCQuestion2 {
     public function printQuestion()
     {
         printf_array($this->template, $this->data);
-        echo "<form method=POST>";
+        echo '<br>';
         foreach ($this->choices as $choice) {
             echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice} ml</label><br>";
         }
-        // echo "<input type=number name=ans><br>";
-        echo '<input type=submit name=next value=Next class="btn btn-primary">';
-        echo "</form>";
     }
 }
 
@@ -252,13 +244,10 @@ class DCQuestion3 {
     public function printQuestion()
     {
         printf_array($this->template, $this->data);
-        echo "<form method=POST>";
+        echo '<br>';
         foreach ($this->choices as $choice) {
             echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice} mg</label><br>";
         }
-        // echo "<input type=number name=ans><br>";
-        echo '<input type=submit name=next value=Next class="btn btn-primary">';
-        echo "</form>";
     }
 }
 
@@ -334,12 +323,10 @@ class UCQuestion1 {
     public function printQuestion()
     {
         printf_array($this->template, $this->data);
-        echo "<form method=POST>";
+        echo '<br>';
         foreach ($this->choices as $choice) {
             echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice}</label><br>";
         }
-        echo '<input type=submit name=next value=Next class="btn btn-primary">';
-        echo "</form>";
     }
 }
 
@@ -406,12 +393,10 @@ class UCQuestion2 {
     public function printQuestion()
     {
         printf_array($this->template, $this->data);
-        echo "<form method=POST>";
+        echo '<br>';
         foreach ($this->choices as $choice) {
             echo "<input type=radio id={$choice} name=ans value={$choice}><label for={$choice}>{$choice} &#181;g</label><br>";
         }
-        echo '<input type=submit name=next value=Next class="btn btn-primary">';
-        echo "</form>";
     }
 }
 

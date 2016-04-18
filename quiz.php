@@ -8,9 +8,6 @@ if (!isset($_SESSION['score'])) $_SESSION['score'] = 0;
 
 if (isset($_POST['next'])) {
     $_SESSION['question'] += 1;
-    if ($_POST['ans'] == $_SESSION['correct_answer']) {
-        $_SESSION['score'] += 1;
-    }
     header("Location: " . $_SERVER['PHP_SELF']);
     exit();
 }
@@ -20,7 +17,7 @@ if ($_SESSION['question'] == 10) {
     exit();
 }
 
-echo "<h2>Question " . ($_SESSION['question']+1) ." / 10</h2><br>";
+echo "<h2>Question " . ($_SESSION['question'] + 1) ." / 10</h2><br>";
 switch ($_SESSION['quiztype']) {
     case 'drugidentificationquiz':
         $question = new DrugIdentification($db_mysql);
@@ -38,6 +35,10 @@ switch ($_SESSION['quiztype']) {
         $question = new DrugIdentification($db_mysql);
         break;
 }
-$question->printQuestion();
 
+echo "<form method=POST id=quizform>";
+$question->printQuestion();
+echo '<button name=check class="btn btn-primary">Check</button>';
+echo '<input type=submit name=next value=Next class="btn btn-primary" disabled=true style="display:block;margin-top:20px;">';
+echo "</form>";
 ?>

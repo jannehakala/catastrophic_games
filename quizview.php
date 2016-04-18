@@ -13,10 +13,10 @@ include ("BL.php");
 
     <title>Scarabeus</title>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
   </head>
   <body>
 
@@ -24,7 +24,6 @@ include ("BL.php");
     <div class="row">
         <div class="col-md-12">
             <ul class="nav nav-tabs">
-                <!-- <p>Hello, {$_SESSION['login_user']}!</p> -->
                 <li class="dropdown pull-right">
                      <a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo $_SESSION['login_user']; ?><strong class="caret"></strong></a>
                     <ul class="dropdown-menu">
@@ -53,6 +52,35 @@ include ("BL.php");
                             if (!isset($_SESSION['quiztype'])) $_SESSION['quiztype'] = 'drugidentificationquiz';
                             include ("quiz.php");
                         ?>
+                        
+                        <script>
+                            // Valitaan ensimmäinen vaihtoehto oletuksena.
+                            $(":radio").first().attr('checked', true);
+                            // Tarkistusnappia painetaan...
+                            $("button[name=check]").click(function(event) {
+                                event.preventDefault();
+                                // Haetaan vastaus ajaxilla checkanswer.php tiedostosta.
+                                $.ajax({
+                                    type: 'POST',
+                                    url: 'checkanswer.php',
+                                    data: $("#quizform").serialize(),
+                                    // Response tulee JSON-muodossa.
+                                    success: function(response) {
+                                        // Poistetaan radiobuttonit käytöstä ja enabloidaan seuraava-nappi.
+                                        $('form input:radio').attr('disabled', true);
+                                        $('button[name=check]').attr('disabled', true);
+                                        $('input[name=next]').attr('disabled', false);
+                                        // iconeilla osoitetaan oikea/väärä vastaus.
+                                        if (response['value'] == true) {
+                                            $("label[for='"+response['answer']+"']").after("<i class='fa fa-check'></i>");
+                                        } else {
+                                            $("label[for='"+response['answer']+"']").after("<i class='fa fa-times'></i>");
+                                            $("label[for='"+response['correct']+"']").after("<i class='fa fa-check'></i>");
+                                        }
+                                    }
+                                });
+                            });
+                        </script>
                         <form action="/" style="margin-top:100px;">
                             <input type="submit" onclick="return confirm('Are you sure you want to quit?')" value="Quit" class="btn btn-danger">
                         </form>
