@@ -22,7 +22,7 @@ if(isset($_SESSION['login_user'])){
         <div id="login">
             <h2>Login</h2>
             <form action="" method="post">
-                <span class="error"><?php if (isset($_SESSION['php'])) echo $_SESSION['errMsg']; ?></span>
+                <span class="error"><?php if (isset($_SESSION['errMsg'])) echo $_SESSION['errMsg']; ?></span>
                 <label>Username</label>
                 <input id="name" name="username" placeholder="username" type="text">
                 <label>Password</label>
