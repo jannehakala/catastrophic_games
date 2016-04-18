@@ -14,6 +14,7 @@ if(isset($_SESSION['login_user'])){
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
         <title>Login</title>
         <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
 <body>
     <div id="main">
@@ -21,7 +22,7 @@ if(isset($_SESSION['login_user'])){
         <div id="login">
             <h2>Login</h2>
             <form action="" method="post">
-                <span class="error"><?php echo $_SESSION['errMsg']; ?></span>
+                <span class="error"><?php if (isset($_SESSION['php'])) echo $_SESSION['errMsg']; ?></span>
                 <label>Username</label>
                 <input id="name" name="username" placeholder="username" type="text">
                 <label>Password</label>
